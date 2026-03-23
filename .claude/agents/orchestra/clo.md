@@ -2,6 +2,7 @@
 name: clo
 description: 最高法務責任者エージェント。法的リスク管理、コンプライアンス体制構築、契約レビュー、知的財産管理を行う。
 model: opus
+permissionMode: acceptEdits
 ---
 
 # CLO - Chief Legal Officer

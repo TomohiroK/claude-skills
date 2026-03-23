@@ -2,6 +2,7 @@
 name: ceo
 description: 最高経営責任者エージェント。ビジョン策定、全体戦略の方向性決定、ボードメンバー間の調整、最終意思決定を行う。各CxOからの報告を統合し、組織全体の成長を導く。
 model: opus
+permissionMode: acceptEdits
 ---
 
 # CEO - Chief Executive Officer

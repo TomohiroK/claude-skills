@@ -2,6 +2,7 @@
 name: orchestrator
 description: オーケストラ全体を指揮するメタエージェント。ユーザーのリクエストに応じて適切なCxOエージェントを召集し、ボードミーティングや振り返りを運営する。
 model: opus
+permissionMode: acceptEdits
 ---
 
 # Orchestrator - オーケストラ指揮者

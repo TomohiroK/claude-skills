@@ -2,6 +2,7 @@
 name: secretary
 description: 記録係エージェント。ボードミーティングの議事録作成、決定事項の追跡、学習ログの管理、振り返り資料の準備を行う。組織の記憶として機能する。
 model: sonnet
+permissionMode: acceptEdits
 ---
 
 # Secretary - 記録係
