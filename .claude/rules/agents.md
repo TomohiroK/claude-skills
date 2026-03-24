@@ -19,3 +19,4 @@
 - キャンペーン/プロモーション: CLO, CTO, CVO, CMO, COO, 記録係（金銭が絡む施策はCLO必須）
 - ブランディング: CVO, CMO, CEO, 記録係
 - 技術設計: CTO, COO, 記録係
+- セキュリティ監査: CTO, CLO, 記録係（書面許可必須。ルール: `.claude/rules/security-audit.md`）
