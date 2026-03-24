@@ -3,7 +3,20 @@
 ## トークン節約
 - 一度読んだコードやプロジェクト情報は CLAUDE.md に記録すること。二度読みしない
 - 同じファイルを複数回読み込む前に CLAUDE.md を確認する
+- コードベース探索後、即座に重要な構造・設定・依存関係を CLAUDE.md に記録する
 - ユーザーに確認を求めすぎない。permissionMode: acceptEdits が設定されている意味を理解する
+
+## 自律的な作業スタイル
+- 明示的な委任（「進めて」「やってください」等）があった場合は完了まで確認なしで進める
+- バッチ作業時にいちいちユーザーに確認しない。まとめて進める
+- 「確認しますか？」「進みますか？」を繰り返さない
+- コード変更時は最小限の変更に留める。過剰なリファクタリングをしない
+- 日本語で応答する（ユーザーが日本語で話している場合）
+
+## プロジェクト作業の事前確認
+- 新しいプロジェクトに触れる際は、まずビルドツール設定を確認する（Trunk.toml, Cargo.toml, package.json, launch.json等）
+- 類似名ディレクトリが存在する場合、作業対象を最初に確認する
+- 静的ファイル配置時はビルドパイプラインのコピー設定を必ず確認する（Trunkのcopy-file/copy-dir等）
 
 ## エージェント作成・編集ルール
 - エージェントファイルは `.claude/agents/{category}/` に配置
@@ -13,17 +26,25 @@
 
 ## ボードミーティング
 - 議事録は `.claude/orchestra/logs/meetings/` に日付ファイルで保存
+- 決定事項テーブルには「決定内容・担当CxO・期限」の3列を必須とする
 - 決定事項は `.claude/orchestra/logs/decisions/` に記録
 - 学習事項は `.claude/orchestra/logs/learnings/` に記録
+- 振り返りは `.claude/orchestra/logs/retrospectives/` に記録
+- 振り返りから得たルールは .claude/rules に反映する
 
-## fixedassets プロジェクト
-- Rust + Leptos 0.7 CSR（WebAssembly）
+## fixedassets（Ledgea）プロジェクト
+- Rust + Leptos 0.7 CSR（WebAssembly）、ビルドツール: Trunk
 - 金融計算には必ず rust_decimal を使用（f64 禁止）
 - ASEAN 11カ国 + 日本対応。各国固有の減価償却ルールあり
 - fixedassets-bn は別プロジェクト。混同しない
-- 商品名は FixedAssets（仮）→ Ledgea に変更予定（未実装）
+- 商品名: Ledgea（レジア）— 適用済み
+- Trunk.toml で静的ファイルのコピー設定を確認すること
+- public/ のファイルは data-trunk rel="copy-file" で明示的にコピーが必要
 
-## 作業スタイル
-- バッチ作業時にいちいちユーザーに確認しない。まとめて進める
-- コード変更時は最小限の変更に留める。過剰なリファクタリングをしない
-- 日本語で応答する（ユーザーが日本語で話している場合）
+## ブランディング作業の標準フロー
+1. ネーミング（CxOボード並行分析 → CEO決裁）
+2. ロゴ設計（バリエーション6点以上 + プレビューHTML）
+3. ブランドガイドライン策定（色彩・タイポグラフィ・文化的配慮）
+4. プロジェクトへの適用（index.html / lp.html / locales / ソース）
+5. ビルド設定確認（Trunk.toml等のビルド設定を含む）
+6. 検証（ブラウザプレビュー・favicon表示確認）
