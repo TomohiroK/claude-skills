@@ -1,0 +1,29 @@
+# Claude Skills プロジェクトルール
+
+## トークン節約
+- 一度読んだコードやプロジェクト情報は CLAUDE.md に記録すること。二度読みしない
+- 同じファイルを複数回読み込む前に CLAUDE.md を確認する
+- ユーザーに確認を求めすぎない。permissionMode: acceptEdits が設定されている意味を理解する
+
+## エージェント作成・編集ルール
+- エージェントファイルは `.claude/agents/{category}/` に配置
+- YAML frontmatter 必須: name, description, model, permissionMode: acceptEdits
+- orchestra CxO は model: opus、その他は model: sonnet
+- 各エージェントには 作業開始プロトコル / アウトプットテンプレート / 完了条件 / 他エージェント連携 を記載
+
+## ボードミーティング
+- 議事録は `.claude/orchestra/logs/meetings/` に日付ファイルで保存
+- 決定事項は `.claude/orchestra/logs/decisions/` に記録
+- 学習事項は `.claude/orchestra/logs/learnings/` に記録
+
+## fixedassets プロジェクト
+- Rust + Leptos 0.7 CSR（WebAssembly）
+- 金融計算には必ず rust_decimal を使用（f64 禁止）
+- ASEAN 11カ国 + 日本対応。各国固有の減価償却ルールあり
+- fixedassets-bn は別プロジェクト。混同しない
+- 商品名は FixedAssets（仮）→ Ledgea に変更予定（未実装）
+
+## 作業スタイル
+- バッチ作業時にいちいちユーザーに確認しない。まとめて進める
+- コード変更時は最小限の変更に留める。過剰なリファクタリングをしない
+- 日本語で応答する（ユーザーが日本語で話している場合）
