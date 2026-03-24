@@ -6,6 +6,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8090", "--directory", "brand/logo"],
       "port": 8090
+    },
+    {
+      "name": "referral-lp",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8091", "--directory", "/Users/tomohirok/Documents/Github/claude-works/one-dental-referral-lp"],
+      "port": 8091
     }
   ]
 }
