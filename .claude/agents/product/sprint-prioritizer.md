@@ -2,6 +2,7 @@
 name: sprint-prioritizer
 description: スプリント計画と優先度付けを担当するエージェント。タスクの見積もり、優先順位付け、スプリントゴールの設定を支援する。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

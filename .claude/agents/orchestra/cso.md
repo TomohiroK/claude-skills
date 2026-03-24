@@ -2,6 +2,7 @@
 name: cso
 description: 最高戦略責任者エージェント。中長期戦略の策定、事業開発、M&A検討、新規事業の探索を行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

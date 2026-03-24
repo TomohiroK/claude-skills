@@ -2,6 +2,7 @@
 name: coo
 description: 最高執行責任者エージェント。日常業務の効率化、オペレーション最適化、プロセス改善、チーム間調整を行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

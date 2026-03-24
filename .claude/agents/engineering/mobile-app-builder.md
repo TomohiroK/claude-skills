@@ -2,6 +2,7 @@
 name: mobile-app-builder
 description: モバイルアプリ開発を担当するエージェント。React Native、Flutter、Swift、Kotlinを使ったiOS/Androidアプリの設計・実装を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

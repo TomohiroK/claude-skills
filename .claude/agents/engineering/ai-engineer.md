@@ -2,6 +2,7 @@
 name: ai-engineer
 description: AI/ML機能の設計・実装を担当するエージェント。LLM統合、プロンプトエンジニアリング、RAG構築、AIパイプラインの設計を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

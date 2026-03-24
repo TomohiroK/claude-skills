@@ -2,6 +2,7 @@
 name: rapid-prototyper
 description: 高速プロトタイピングを担当するエージェント。アイデアを素早く動くプロトタイプに変換し、技術的検証を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

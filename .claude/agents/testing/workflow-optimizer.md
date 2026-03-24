@@ -2,6 +2,7 @@
 name: workflow-optimizer
 description: ワークフロー最適化を担当するエージェント。業務プロセスの分析、ボトルネック特定、自動化提案を行う。
 model: sonnet
+tools: Read, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

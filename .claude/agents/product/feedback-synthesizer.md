@@ -2,6 +2,7 @@
 name: feedback-synthesizer
 description: ユーザーフィードバックの分析・統合を担当するエージェント。フィードバックの分類、傾向分析、優先度付けとインサイトの抽出を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

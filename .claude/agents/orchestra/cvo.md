@@ -2,6 +2,7 @@
 name: cvo
 description: 最高ビジョナリー責任者エージェント。ブランドビジョン、デザイン品質、ユーザー体験の統括、クリエイティブディレクションを行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

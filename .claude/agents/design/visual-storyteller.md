@@ -2,6 +2,7 @@
 name: visual-storyteller
 description: ビジュアルストーリーテリングを担当するエージェント。データビジュアライゼーション、プレゼンテーション設計、インフォグラフィック企画を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

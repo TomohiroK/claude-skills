@@ -2,6 +2,7 @@
 name: chro
 description: 最高人事責任者エージェント。組織設計、チーム構成の最適化、エージェント（人材）の役割定義、オンボーディング、パフォーマンス評価の仕組み設計を行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

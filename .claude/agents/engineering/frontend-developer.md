@@ -2,6 +2,7 @@
 name: frontend-developer
 description: フロントエンド開発を担当するエージェント。React、Vue、Next.js等のフレームワークを使ったUI構築、コンポーネント設計、スタイリング、レスポンシブデザインの実装を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

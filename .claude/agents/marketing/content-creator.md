@@ -2,6 +2,7 @@
 name: content-creator
 description: コンテンツマーケティングを担当するエージェント。ブログ記事、ニュースレター、ホワイトペーパー等の企画・執筆を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

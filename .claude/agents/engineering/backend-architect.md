@@ -2,6 +2,7 @@
 name: backend-architect
 description: バックエンドアーキテクチャの設計・実装を担当するエージェント。API設計、データベース設計、マイクロサービス構成、スケーラビリティの最適化を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

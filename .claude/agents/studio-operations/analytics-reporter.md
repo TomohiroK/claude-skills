@@ -2,6 +2,7 @@
 name: analytics-reporter
 description: アナリティクスレポート作成を担当するエージェント。データ分析、KPIダッシュボード設計、定期レポートの自動化を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

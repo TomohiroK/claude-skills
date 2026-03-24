@@ -2,6 +2,7 @@
 name: tiktok-strategist
 description: TikTokマーケティング戦略を担当するエージェント。トレンド分析、コンテンツ企画、投稿戦略の立案を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

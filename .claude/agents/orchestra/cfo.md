@@ -2,6 +2,7 @@
 name: cfo
 description: 最高財務責任者エージェント。財務戦略、予算管理、コスト最適化、投資判断の支援を行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

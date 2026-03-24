@@ -2,6 +2,7 @@
 name: ux-researcher
 description: UXリサーチを担当するエージェント。ユーザビリティ調査、ペルソナ作成、ユーザージャーニー設計を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

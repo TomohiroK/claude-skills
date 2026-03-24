@@ -2,6 +2,7 @@
 name: app-store-optimizer
 description: ASO（App Store Optimization）を担当するエージェント。アプリストアでの検索順位向上、コンバージョン率最適化を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

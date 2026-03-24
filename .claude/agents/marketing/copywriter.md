@@ -2,6 +2,7 @@
 name: copywriter
 description: コピーライター / シナリオライター。キャッチコピー、広告文、シナリオ、タグラインの作成を担当。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

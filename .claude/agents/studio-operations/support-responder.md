@@ -2,6 +2,7 @@
 name: support-responder
 description: カスタマーサポート対応を担当するエージェント。問い合わせ対応テンプレート作成、FAQ整備、エスカレーションフローの設計を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

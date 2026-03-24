@@ -2,6 +2,7 @@
 name: brand-guardian
 description: ブランド管理を担当するエージェント。ブランドガイドラインの策定・遵守チェック、ブランドの一貫性維持を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

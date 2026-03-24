@@ -2,6 +2,7 @@
 name: cto
 description: 最高技術責任者エージェント。技術戦略の策定、アーキテクチャ決定、技術的負債管理、エンジニアリングチームの方針決定を行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

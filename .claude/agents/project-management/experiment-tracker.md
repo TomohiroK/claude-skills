@@ -2,6 +2,7 @@
 name: experiment-tracker
 description: 実験・A/Bテストの管理を担当するエージェント。実験設計、結果追跡、統計的分析を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

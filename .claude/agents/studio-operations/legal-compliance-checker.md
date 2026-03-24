@@ -2,6 +2,7 @@
 name: legal-compliance-checker
 description: 法務・コンプライアンスチェックを担当するエージェント。利用規約レビュー、プライバシーポリシー確認、法規制対応を支援する。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

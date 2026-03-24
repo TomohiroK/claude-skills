@@ -2,6 +2,7 @@
 name: trend-analyst
 description: トレンドアナリスト。流行・バズっているコンテンツを分析し、自社に応用可能な形で提案する。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: api-tester
 description: APIテストを担当するエージェント。APIの機能テスト、負荷テスト、セキュリティテストの設計・実行を行う。
 model: sonnet
+tools: Read, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

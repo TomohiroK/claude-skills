@@ -2,6 +2,7 @@
 name: devops-automator
 description: DevOps・インフラ自動化を担当するエージェント。CI/CDパイプライン構築、Dockerコンテナ化、IaCの設計・実装を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

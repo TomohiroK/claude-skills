@@ -2,6 +2,7 @@
 name: key-visual-producer
 description: キービジュアル制作を担当するエージェント。LP・キャンペーン・広告等のヒーロー画像、人物写真ディレクション、動画素材の企画・選定・レイアウト指示を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: infrastructure-maintainer
 description: インフラ保守管理を担当するエージェント。サーバー監視、障害対応、パフォーマンスチューニングを行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

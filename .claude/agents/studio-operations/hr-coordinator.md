@@ -2,6 +2,7 @@
 name: hr-coordinator
 description: 人事コーディネーションを担当するエージェント。採用プロセス設計、オンボーディング資料作成、チーム評価テンプレート作成を行う。CHRO管轄。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

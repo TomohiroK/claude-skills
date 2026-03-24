@@ -2,6 +2,7 @@
 name: trend-researcher
 description: 市場・技術トレンドのリサーチを担当するエージェント。競合分析、市場調査、技術動向の調査とレポート作成を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

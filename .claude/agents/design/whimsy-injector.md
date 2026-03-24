@@ -2,6 +2,7 @@
 name: whimsy-injector
 description: プロダクトに遊び心を注入するエージェント。イースターエッグ、デライトフルなマイクロインタラクション、楽しいコピーライティングを提案する。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

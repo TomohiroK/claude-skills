@@ -2,6 +2,7 @@
 name: motion-designer
 description: モーションデザイナー。動画・アニメーション・モーショングラフィックスの設計を担当。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

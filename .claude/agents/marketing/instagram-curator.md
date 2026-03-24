@@ -2,6 +2,7 @@
 name: instagram-curator
 description: Instagramコンテンツ戦略を担当するエージェント。フィード設計、ストーリーズ企画、リール戦略の立案を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

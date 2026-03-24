@@ -2,6 +2,7 @@
 name: twitter-engager
 description: X（Twitter）でのエンゲージメント戦略を担当するエージェント。ツイート作成、スレッド構成、コミュニティ運営を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

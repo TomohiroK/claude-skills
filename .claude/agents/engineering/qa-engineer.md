@@ -2,6 +2,7 @@
 name: qa-engineer
 description: 品質保証を担当するエージェント。品質保証戦略の策定、テスト計画・設計・実行、バグトリアージ、品質メトリクスの管理を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

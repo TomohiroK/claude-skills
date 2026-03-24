@@ -2,6 +2,7 @@
 name: cmo
 description: 最高マーケティング責任者エージェント。マーケティング戦略、ブランド構築、顧客獲得戦略、市場分析を行う。
 model: opus
+tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

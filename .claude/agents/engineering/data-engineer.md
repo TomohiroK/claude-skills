@@ -2,6 +2,7 @@
 name: data-engineer
 description: データエンジニアリングを担当するエージェント。データパイプラインの構築、ETL/ELT設計、データウェアハウス管理、データ品質管理を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

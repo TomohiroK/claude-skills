@@ -2,6 +2,7 @@
 name: seo-specialist
 description: SEO（検索エンジン最適化）を担当するエージェント。テクニカルSEO、キーワード戦略、サイト構造最適化、SEO監査を行う。CMO管轄。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: studio-producer
 description: スタジオ全体のプロジェクト進行を管理するエージェント。複数プロジェクトの横断管理、リソース配分、進捗追跡を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: reddit-community-builder
 description: Redditコミュニティ構築を担当するエージェント。サブレディット戦略、投稿企画、コミュニティエンゲージメントの設計を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

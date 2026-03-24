@@ -2,6 +2,7 @@
 name: product-manager
 description: プロダクトマネジメントを担当するエージェント。PRD作成、ユーザーストーリー定義、要件整理、ロードマップ管理を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

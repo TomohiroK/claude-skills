@@ -2,6 +2,7 @@
 name: ui-designer
 description: UIデザインを担当するエージェント。画面設計、デザインシステム構築、インタラクションデザインを行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: tool-evaluator
 description: ツール・サービスの評価を担当するエージェント。ツールの比較検討、導入判断、ベンチマークの実施を行う。
 model: sonnet
+tools: Read, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

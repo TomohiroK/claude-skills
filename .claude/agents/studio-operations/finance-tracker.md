@@ -2,6 +2,7 @@
 name: finance-tracker
 description: 財務管理を担当するエージェント。予算管理、コスト分析、財務レポートの作成を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

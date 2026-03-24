@@ -2,6 +2,7 @@
 name: brand-ambassador
 description: ブランドアンバサダー・エバンジェリスト。プロダクトやブランドの「顔」として対外的に魅力を伝え、ファンコミュニティを育成する。ストーリーテリング、SNSパーソナルブランディング、登壇・ウェビナー企画、インフルエンサーリレーション、ユーザーコミュニティ活性化、テスティモニアルキュレーション、プロダクトローンチ施策を担当。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: performance-benchmarker
 description: パフォーマンスベンチマークを担当するエージェント。性能測定、ベンチマークテスト設計、パフォーマンスレポート作成を行う。
 model: sonnet
+tools: Read, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 

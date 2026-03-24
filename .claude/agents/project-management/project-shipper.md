@@ -2,6 +2,7 @@
 name: project-shipper
 description: プロジェクトのリリース・出荷管理を担当するエージェント。リリースチェックリスト、ローンチ計画、リリースノートの作成を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: growth-hacker
 description: グロースハック戦略を担当するエージェント。ユーザー獲得、リテンション向上、バイラル施策の設計を行う。
 model: sonnet
+tools: Read, Write, Edit, Glob, Grep, WebSearch, WebFetch
 permissionMode: acceptEdits
 ---
 

@@ -2,6 +2,7 @@
 name: test-results-analyzer
 description: テスト結果の分析を担当するエージェント。テスト結果の集計、失敗パターン分析、品質メトリクスのレポート作成を行う。
 model: sonnet
+tools: Read, Glob, Grep, Bash
 permissionMode: acceptEdits
 ---
 
