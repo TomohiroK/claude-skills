@@ -3,7 +3,19 @@
     "allow": [
       "Bash(for dir:*)",
       "Bash(do touch:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "WebFetch(domain:3x3exe.com)",
+      "WebFetch(domain:www.japanbasketball.jp)",
+      "Bash(npm run:*)",
+      "WebFetch(domain:3x3.tmkproduct.com)",
+      "Bash(curl -s https://3x3.tmkproduct.com)",
+      "Bash(curl -s https://3x3.tmkproduct.com/events/1)",
+      "Bash(curl -sI https://3x3.tmkproduct.com)",
+      "WebFetch(domain:fiba3x3.basketball)",
+      "WebFetch(domain:worldtour.fiba3x3.com)",
+      "WebSearch",
+      "WebFetch(domain:about.fiba.basketball)",
+      "mcp__Claude_Preview__preview_start"
     ]
   }
 }

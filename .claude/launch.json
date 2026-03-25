@@ -12,6 +12,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8091", "--directory", "/Users/tomohirok/Documents/Github/claude-works/one-dental-referral-lp"],
       "port": 8091
+    },
+    {
+      "name": "3x3-portal",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/3x3-portal/apps/web-next"],
+      "port": 3000
     }
   ]
 }
