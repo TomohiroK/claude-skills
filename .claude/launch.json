@@ -18,6 +18,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/3x3-portal/apps/web-next"],
       "port": 3000
+    },
+    {
+      "name": "jobseeker-front",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/Career-Bridge/jobseeker-front"],
+      "port": 2322
     }
   ]
 }

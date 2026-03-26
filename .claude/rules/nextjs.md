@@ -49,6 +49,33 @@ export const metadata = {
 </html>
 ```
 
+## 動的ルートと静的ファイルの競合
+
+- `[slug]` や `[...catchAll]` 動的ルートがある場合、`public/` に追加した静的ファイルが動的ルートに遮蔽される場合がある
+- 例: `app/(serverLayout)/[jobType]/` があると、`/llms.txt` が `[jobType]` にマッチし404になる
+- 対策: `next.config.js` の `rewrites({ beforeFiles })` で静的ファイルを明示的にルーティングする
+
+```js
+// next.config.js
+async rewrites() {
+  return {
+    beforeFiles: [
+      { source: "/llms.txt", destination: "/llms.txt" },
+      { source: "/llms-full.txt", destination: "/llms-full.txt" },
+    ],
+  }
+}
+```
+
+- `public/` にファイルを追加する際は、動的ルートとの競合を必ず確認する
+- `.xml` 等の拡張子は動的ルートにマッチしにくいが、`.txt` はマッチしやすい
+
+## JSX の HTML 属性名はキャメルケース
+
+- JSXではHTML属性名をキャメルケースに変換する必要がある
+- よくある変換: `class` → `className`, `hreflang` → `hrefLang`, `tabindex` → `tabIndex`, `for` → `htmlFor`
+- TypeScriptの型チェックで検出されるが、ビルド時にしか分からないため注意
+
 ## デプロイ前のローカル検証
 
 - metadata / head の変更後は、デプロイ前にローカルでHTML出力を確認する

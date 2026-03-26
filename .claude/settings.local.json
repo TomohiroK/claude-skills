@@ -15,7 +15,10 @@
       "WebFetch(domain:worldtour.fiba3x3.com)",
       "WebSearch",
       "WebFetch(domain:about.fiba.basketball)",
-      "mcp__Claude_Preview__preview_start"
+      "mcp__Claude_Preview__preview_start",
+      "Bash(grep -E \"^/Users/tomohirok/Documents/Github/Career-Bridge/jobseeker-front/[^/]+$\")",
+      "Bash(find /Users/tomohirok/Documents/Github/claude-skills/.claude/orchestra/logs/retrospectives -type f -name *.md)",
+      "Bash(find /Users/tomohirok/Documents/Github/claude-skills/.claude/orchestra/logs/learnings -type f -name *.md)"
     ]
   }
 }
