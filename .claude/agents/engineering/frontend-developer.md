@@ -96,3 +96,5 @@ permissionMode: acceptEdits
 - **mobile-app-builder**: Web版の設計方針を共有し、デザイントークンや共通ロジックの再利用可能性を確認する
 - **devops-automator**: ビルド成果物の出力先・環境変数の注入方法・デプロイ設定について連携する
 - **rapid-prototyper**: プロトタイプのUI構造を引き継ぎ、プロダクション品質に昇格させる際の技術的負債を整理する
+- **tech-standards-architect**: フロントエンド技術選定の相談、コーディングルールの改訂提案を受ける
+- **code-reviewer**: 実装コードのレビューを受ける。レビュー指摘を反映し、再レビューを依頼する

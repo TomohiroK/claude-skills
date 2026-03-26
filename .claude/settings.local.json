@@ -21,7 +21,29 @@
       "Bash(find /Users/tomohirok/Documents/Github/claude-skills/.claude/orchestra/logs/learnings -type f -name *.md)",
       "WebFetch(domain:mobbin.com)",
       "WebFetch(domain:spdload.com)",
-      "WebFetch(domain:www.sanjaydey.com)"
+      "WebFetch(domain:www.sanjaydey.com)",
+      "WebFetch(domain:fiba3x3.com)",
+      "WebFetch(domain:www.youtube.com)",
+      "WebFetch(domain:olympics.com)",
+      "WebFetch(domain:www.nbcolympics.com)",
+      "WebFetch(domain:www.fiba.basketball)",
+      "WebFetch(domain:x.com)",
+      "WebFetch(domain:www.olympics.com)",
+      "WebFetch(domain:www.courtside1891.basketball)",
+      "Bash(curl -s \"https://www.youtube.com/results?search_query=FIBA+3x3+basketball+highlights+best+plays&sp=CAMSAhAB\" -H 'User-Agent: Mozilla/5.0')",
+      "Bash(curl -s \"https://www.youtube.com/results?search_query=FIBA+3x3+best+plays+highlights&sp=CAMSAhAB\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\)\")",
+      "Bash(curl -s \"https://www.youtube.com/results?search_query=3x3+basketball+dunk+contest+FIBA&sp=CAMSAhAB\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\)\")",
+      "Bash(curl -s \"https://www.youtube.com/results?search_query=3x3.EXE+PREMIER+highlights+japan&sp=CAMSAhAB\" -H \"User-Agent: Mozilla/5.0 \\(Macintosh; Intel Mac OS X 10_15_7\\)\")",
+      "WebFetch(domain:baseline.sg)",
+      "Bash(npx vercel:*)",
+      "Bash(curl -s https://3x3.tmkproduct.com/events/3)",
+      "WebFetch(domain:alvinology.com)",
+      "Bash(curl -s https://3x3.tmkproduct.com/events/6)",
+      "Bash(curl -s https://3x3.tmkproduct.com/events/4)",
+      "Bash(curl -s https://3x3.tmkproduct.com/events/5)",
+      "Bash(curl -s \"https://3x3.tmkproduct.com/teams?category=WT\")",
+      "Bash(curl -s http://localhost:3000/venues)",
+      "Bash(curl -s https://3x3.tmkproduct.com/)"
     ]
   }
 }

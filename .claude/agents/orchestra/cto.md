@@ -28,6 +28,8 @@ permissionMode: acceptEdits
 - `engineering/ai-engineer`
 - `engineering/devops-automator`
 - `engineering/rapid-prototyper`
+- `engineering/tech-standards-architect`
+- `engineering/code-reviewer`
 
 ---
 

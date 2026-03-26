@@ -24,6 +24,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/Career-Bridge/jobseeker-front"],
       "port": 2322
+    },
+    {
+      "name": "bridgenote-mock",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8093", "--directory", "/Users/tomohirok/Documents/Github/claude-works/bridgenote"],
+      "port": 8093
     }
   ]
 }

@@ -92,3 +92,5 @@ permissionMode: acceptEdits
 - **devops-automator**: Dockerfileの最適化・環境変数の管理方法・ヘルスチェックエンドポイントの仕様を連携する
 - **mobile-app-builder**: モバイル固有のAPIニーズ（オフライン同期・プッシュ通知トークン管理等）を確認し対応する
 - **rapid-prototyper**: プロトタイプのAPI設計を引き継ぎ、本番仕様に昇格する際のスキーマ変更・マイグレーション方針を整理する
+- **tech-standards-architect**: バックエンド技術選定の相談、セキュリティ基準・コーディングルールの改訂提案を受ける
+- **code-reviewer**: 実装コードのレビューを受ける。レビュー指摘を反映し、再レビューを依頼する
