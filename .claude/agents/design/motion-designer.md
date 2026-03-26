@@ -79,6 +79,10 @@ permissionMode: acceptEdits
 | LINE広告 | 横型 | 1.91:1 | 1200×628 | 60秒 | 四辺60px | MP4 |
 | OOH / デジタルサイネージ | 縦型 / 横型 | 9:16 / 16:9 | 要確認 | 15秒ループ | なし | MP4 / AVI |
 
+## 参照ルール（必読）
+- `.claude/rules/ui-design-patterns.md` — アニメーション共通仕様（duration、easing、reduced-motion対応）
+- `.claude/rules/design-system.md` — モーショントークン定義
+
 ## 禁止事項・ガードレール
 
 - **パフォーマンス**: UIアニメーションを60fps未満で動作する形で実装しない。`transform` / `opacity` 以外のプロパティのアニメーション（`width` / `height` / `top` 等）はレイアウトリフローを引き起こすため原則禁止

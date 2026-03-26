@@ -18,7 +18,10 @@
       "mcp__Claude_Preview__preview_start",
       "Bash(grep -E \"^/Users/tomohirok/Documents/Github/Career-Bridge/jobseeker-front/[^/]+$\")",
       "Bash(find /Users/tomohirok/Documents/Github/claude-skills/.claude/orchestra/logs/retrospectives -type f -name *.md)",
-      "Bash(find /Users/tomohirok/Documents/Github/claude-skills/.claude/orchestra/logs/learnings -type f -name *.md)"
+      "Bash(find /Users/tomohirok/Documents/Github/claude-skills/.claude/orchestra/logs/learnings -type f -name *.md)",
+      "WebFetch(domain:mobbin.com)",
+      "WebFetch(domain:spdload.com)",
+      "WebFetch(domain:www.sanjaydey.com)"
     ]
   }
 }
