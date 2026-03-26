@@ -12,3 +12,6 @@ paths:
 - SEO: title, meta description, OGP, canonical を必ず設定する
 - フォント読み込みは display=swap を使う
 - 外部CDN（Tailwind, FontAwesome等）使用時は integrity 属性を検討する
+- absolute/fixed 配置の装飾要素には必ず `pointer-events-none` を付与する（詳細: `css-responsive.md`）
+- リリース前にモバイル（375px幅）で全CTA/リンクを実際にクリックし遷移を確認する
+- レスポンシブ検証は「見た目」だけでなく「操作（クリック/タッチ）」も含める
