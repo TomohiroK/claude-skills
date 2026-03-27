@@ -1,14 +1,15 @@
 # Claude Skills
 
 ## このリポジトリについて
-Claude Code のサブエージェント組織（57名）を管理するリポジトリ。
+Claude Code のサブエージェント組織（68名）を管理するリポジトリ。
 CxOボード（orchestra）による振り返り・改善サイクルを持つ。
 
 ## ディレクトリ構成
 ```
 .claude/
-├── agents/                    # エージェント定義（57名）
+├── agents/                    # エージェント定義（68名）
 │   ├── engineering/           # 10名
+│   ├── platforms/             # 10名（外部サービスエキスパート）
 │   ├── product/               # 4名
 │   ├── marketing/             # 12名
 │   ├── design/                # 6名
