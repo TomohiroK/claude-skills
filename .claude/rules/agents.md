@@ -33,7 +33,8 @@
 | vercel-expert | Vercel (Deploy/Edge/Serverless) | CTO |
 | neon-expert | Neon (Serverless PostgreSQL) | CTO |
 | aws-expert | Amazon Web Services | CTO |
-| gcp-expert | Google Cloud Platform / Firebase | CTO |
+| gcp-expert | Google Cloud Platform | CTO |
+| firebase-expert | Firebase | CTO |
 
 ## 独立遊軍: service-account-manager
 - `.claude/agents/service-account-manager.md`（CTO直轄、カテゴリ非所属）

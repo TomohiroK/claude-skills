@@ -67,7 +67,8 @@
 | vercel-expert | CTO | デプロイ戦略、Edge機能設計、パフォーマンス最適化時 |
 | neon-expert | CTO | DB設計、マイグレーション、スケーリング時 |
 | aws-expert | CTO | AWSインフラ設計、コスト最適化、セキュリティ時 |
-| gcp-expert | CTO | GCPインフラ設計、Firebase設定、BigQuery時 |
+| gcp-expert | CTO | GCPインフラ設計、Cloud SQL、BigQuery時 |
+| firebase-expert | CTO | Firebase設計、Authentication、Firestore、Hosting時 |
 
 ## 複数エキスパートの連携パターン
 

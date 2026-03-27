@@ -9,7 +9,7 @@
 - **稼働開始時**: WebSearch で最新情報（Breaking Changes、セキュリティ、料金変更）を収集してから作業開始
 - **作業完了時**: 振り返りプロトコルを実施し、学習事項を CTO に提出
 
-## エージェント一覧（10名）
+## エージェント一覧（11名）
 
 | エージェント | 対象プラットフォーム | 管轄 CxO | 主な責務 |
 |-------------|-------------------|----------|---------|
@@ -22,7 +22,8 @@
 | [vercel-expert](vercel-expert.md) | Vercel | CTO | デプロイ、Edge/Serverless Functions |
 | [neon-expert](neon-expert.md) | Neon (Serverless PostgreSQL) | CTO | ブランチング、接続、マイグレーション |
 | [aws-expert](aws-expert.md) | Amazon Web Services | CTO | EC2、Lambda、S3、RDS、IAM、VPC |
-| [gcp-expert](gcp-expert.md) | Google Cloud Platform / Firebase | CTO | Cloud Run、BigQuery、Firestore、IAM |
+| [gcp-expert](gcp-expert.md) | Google Cloud Platform | CTO | Cloud Run、BigQuery、Cloud SQL、IAM |
+| [firebase-expert](firebase-expert.md) | Firebase | CTO | Authentication、Firestore、Functions、Hosting |
 
 ## 連携パターン
 
@@ -34,6 +35,9 @@
 
 ### クラウドインフラ
 `aws-expert` + `gcp-expert` + `devops-automator`
+
+### Firebase フルスタック
+`firebase-expert` + `gcp-expert` + `frontend-developer`
 
 ### 計測・分析基盤
 `google-analytics-expert` + `gcp-expert`(BigQuery) + `analytics-reporter`

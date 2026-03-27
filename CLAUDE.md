@@ -1,15 +1,15 @@
 # Claude Skills
 
 ## このリポジトリについて
-Claude Code のサブエージェント組織（69名）を管理するリポジトリ。
+Claude Code のサブエージェント組織（70名）を管理するリポジトリ。
 CxOボード（orchestra）による振り返り・改善サイクルを持つ。
 
 ## ディレクトリ構成
 ```
 .claude/
-├── agents/                    # エージェント定義（69名）
+├── agents/                    # エージェント定義（70名）
 │   ├── engineering/           # 10名
-│   ├── platforms/             # 10名（外部サービスエキスパート）
+│   ├── platforms/             # 11名（外部サービスエキスパート）
 │   ├── service-account-manager.md  # 独立遊軍（CTO直轄）
 │   ├── product/               # 4名
 │   ├── marketing/             # 12名
@@ -41,7 +41,7 @@ brand/                         # ブランド素材（Ledgea）
 
 ## platforms フェーズ投入（2026-03-27 ボード決定）
 - **Phase 1（即稼働）**: vercel-expert, cloudflare-expert, neon-expert, claude-api-expert, google-analytics-expert, service-account-manager
-- **Phase 2（実需発生時稼働）**: aws-expert, gcp-expert, openai-api-expert, google-tts-expert, google-drive-expert
+- **Phase 2（実需発生時稼働）**: aws-expert, gcp-expert, firebase-expert, openai-api-expert, google-tts-expert, google-drive-expert
 
 ## クレデンシャル管理
 - Vault: ~/.claude-vault/（service-account-manager 専用、他エージェントアクセス禁止）
