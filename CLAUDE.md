@@ -1,15 +1,16 @@
 # Claude Skills
 
 ## このリポジトリについて
-Claude Code のサブエージェント組織（68名）を管理するリポジトリ。
+Claude Code のサブエージェント組織（69名）を管理するリポジトリ。
 CxOボード（orchestra）による振り返り・改善サイクルを持つ。
 
 ## ディレクトリ構成
 ```
 .claude/
-├── agents/                    # エージェント定義（68名）
+├── agents/                    # エージェント定義（69名）
 │   ├── engineering/           # 10名
 │   ├── platforms/             # 10名（外部サービスエキスパート）
+│   ├── service-account-manager.md  # 独立遊軍（CTO直轄）
 │   ├── product/               # 4名
 │   ├── marketing/             # 12名
 │   ├── design/                # 6名
@@ -37,6 +38,15 @@ brand/                         # ブランド素材（Ledgea）
 - `/project:retrospective [name]` — 振り返りの実施
 - `/project:board-meeting [agenda]` — ボードミーティング開催
 - `/project:new-project [name]` — 新規プロジェクト開始
+
+## platforms フェーズ投入（2026-03-27 ボード決定）
+- **Phase 1（即稼働）**: vercel-expert, cloudflare-expert, neon-expert, claude-api-expert, google-analytics-expert, service-account-manager
+- **Phase 2（実需発生時稼働）**: aws-expert, gcp-expert, openai-api-expert, google-tts-expert, google-drive-expert
+
+## クレデンシャル管理
+- Vault: ~/.claude-vault/（service-account-manager 専用、他エージェントアクセス禁止）
+- クレデンシャルは Claude 会話上で受け渡さない。inbox/ フォルダ経由で暗号化する
+- 詳細: `.claude/rules/credential-management.md`
 
 ## 作業ディレクトリ
 - 全作業: /Users/tomohirok/Documents/Github/claude-works/{project}/

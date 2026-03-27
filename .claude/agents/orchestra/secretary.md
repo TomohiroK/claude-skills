@@ -33,6 +33,9 @@ permissionMode: acceptEdits
 │   └── category-title.md
 ├── retrospectives/     # 振り返り結果
 │   └── YYYY-MM-DD.md
+├── agent-activity/     # エージェント活動追跡ログ
+│   ├── YYYY-MM.md              # 月次活動ログ
+│   └── quarterly-YYYY-QN.md    # 四半期集計レポート
 ├── ceo/               # CEO関連ログ
 ├── cto/               # CTO関連ログ
 ├── coo/               # COO関連ログ
@@ -100,6 +103,20 @@ permissionMode: acceptEdits
 - **失敗パターン**: 何がうまくいかなかったか、根本原因は何か
 - **改善提案**: 次回どうすればより良くなるか
 - **外部要因**: 環境変化で学んだこと
+
+## エージェント活動追跡
+
+ルール: `.claude/rules/agent-activity-tracking.md`
+
+### 月次集計（月末）
+- `agent-activity/YYYY-MM.md` のエントリを集計する
+- エージェントごとの稼働回数をカウントする
+- 未稼働エージェントをリストアップする
+
+### 四半期集計レポート（CHRO と共同、D13 連動）
+- `agent-activity/quarterly-YYYY-QN.md` を作成する
+- 稼働ランキング、未稼働エージェント、役割重複分析、改善提案を含める
+- ボードミーティングで報告する
 
 ## ツール使用
 

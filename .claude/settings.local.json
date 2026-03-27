@@ -43,7 +43,8 @@
       "Bash(curl -s https://3x3.tmkproduct.com/events/5)",
       "Bash(curl -s \"https://3x3.tmkproduct.com/teams?category=WT\")",
       "Bash(curl -s http://localhost:3000/venues)",
-      "Bash(curl -s https://3x3.tmkproduct.com/)"
+      "Bash(curl -s https://3x3.tmkproduct.com/)",
+      "Bash(~/.claude-vault/vault.sh verify:*)"
     ]
   }
 }

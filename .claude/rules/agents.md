@@ -35,6 +35,13 @@
 | aws-expert | Amazon Web Services | CTO |
 | gcp-expert | Google Cloud Platform / Firebase | CTO |
 
+## 独立遊軍: service-account-manager
+- `.claude/agents/service-account-manager.md`（CTO直轄、カテゴリ非所属）
+- クレデンシャルの暗号化管理に特化。他エージェントから Vault への直接アクセスは禁止
+- 専用作業ディレクトリ: `~/.claude-vault/`（他エージェント干渉不可）
+- ルール: `.claude/rules/credential-management.md`
+- **会話上でのクレデンシャル受け渡し禁止** — inbox フォルダ経由のみ
+
 ## CxO召集パターン
 - キャンペーン/プロモーション: CLO, CTO, CVO, CMO, COO, 記録係（金銭が絡む施策はCLO必須）
 - ブランディング: CVO, CMO, CEO, 記録係
@@ -42,3 +49,10 @@
 - セキュリティ監査: CTO, CLO, 記録係（書面許可必須。ルール: `.claude/rules/security-audit.md`）
 - コードレビュー: code-reviewer, （必要に応じて）tech-standards-architect, CTO
 - プラットフォーム操作: 該当エキスパート + 管轄CxO（ルール: `.claude/rules/platform-experts.md`）
+
+## エージェント活動追跡
+- 全ワークフロー完了時に orchestrator が活動ログを記録する（必須）
+- ログ: `.claude/orchestra/logs/agent-activity/YYYY-MM.md`
+- 月次集計: secretary が月末に実施
+- 四半期レポート: secretary + CHRO が作成し、ボードミーティングで報告
+- ルール: `.claude/rules/agent-activity-tracking.md`

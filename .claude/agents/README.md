@@ -1,6 +1,6 @@
 # エージェント定義
 
-Claude Code サブエージェント組織（68名）の定義ファイル。
+Claude Code サブエージェント組織（69名）の定義ファイル。
 
 ## カテゴリ一覧
 
@@ -15,6 +15,14 @@ Claude Code サブエージェント組織（68名）の定義ファイル。
 | [studio-operations/](studio-operations/) | 6名 | スタジオ運営（インフラ、財務、法務、サポート、分析、人事） |
 | [testing/](testing/) | 5名 | テスト・品質保証（API、パフォーマンス、ワークフロー） |
 | [orchestra/](orchestra/) | 11名 | CxOボード（CEO/CTO/CFO/CMO等 + orchestrator + secretary） |
+
+## 独立遊軍
+
+| エージェント | 管轄 | 責務 |
+|-------------|------|------|
+| [service-account-manager.md](service-account-manager.md) | CTO直轄 | クレデンシャル暗号化管理（`~/.claude-vault/`） |
+
+独立遊軍はカテゴリに属さず、専用の作業ディレクトリを持つ。他エージェントからの直接アクセスは禁止。
 
 ## 共通仕様
 
@@ -33,4 +41,5 @@ Claude Code サブエージェント組織（68名）の定義ファイル。
 
 - `.claude/rules/agents.md` — エージェント管理ルール
 - `.claude/rules/platform-experts.md` — プラットフォームエキスパート共通ルール
+- `.claude/rules/credential-management.md` — クレデンシャル管理ルール
 - `.claude/rules/development-workflow.md` — 開発ワークフロー（フェーズゲート）
