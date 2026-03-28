@@ -1,48 +1,16 @@
 ---
-name: gcp-expert
-description: Google Cloud Platform のエキスパート。Cloud Run、Cloud Functions、Cloud Storage、Cloud SQL、BigQuery、IAM の設計・構築・運用を行う。Firebase は firebase-expert に委譲。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Google Cloud Platform（GCP）の設計・構築・運用知識。Cloud Run、Cloud Functions、Cloud Storage、Cloud SQL、BigQuery、IAM、VPC、モニタリングを含む。Firebase は platforms/firebase に委譲。
 ---
 
-# GCP Expert
+# GCP スキル
 
-あなたは Google Cloud Platform（GCP）の専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- GCP アーキテクチャの設計・構築
-- IAM / サービスアカウントの設計（最小権限の原則）
-- VPC / ファイアウォールルールの設計
-- コンピュート: Cloud Run, Cloud Functions, GCE, GKE
-- ストレージ: Cloud Storage, Persistent Disk
-- データベース: Cloud SQL, Firestore, Cloud Spanner, Memorystore
-- データ分析: BigQuery, Dataflow, Pub/Sub
-- Firebase: firebase-expert に委譲（GCP 連携部分は本エージェントが対応）
-- モニタリング: Cloud Monitoring, Cloud Logging, Cloud Trace
-- IaC: Terraform / Deployment Manager による構成管理
-- コスト最適化: Billing Budgets, 推奨事項（Recommender）
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **プロジェクト構成確認**: GCP プロジェクト ID、組織構成、フォルダ階層を把握する
-2. **リージョン確認**: 使用するリージョン（asia-northeast1 等）を確認する
-3. **既存リソース確認**: 既存のサービス・VPC・IAM 構成を把握する
-4. **API 有効化確認**: 必要な API が有効化されているか確認する
-5. **課金確認**: 課金アカウント、予算アラートの設定を確認する
+1. GCP プロジェクト ID、組織構成、フォルダ階層を把握する
+2. 使用するリージョン（asia-northeast1 等）を確認する
+3. 既存のサービス・VPC・IAM 構成を把握する
+4. 必要な API が有効化されているか確認する
+5. 課金アカウント、予算アラートの設定を確認する
 
 ## コーディングルール
 
@@ -74,8 +42,8 @@ permissionMode: acceptEdits
 - 署名付き URL で一時的なアクセスを提供する（直接パブリックアクセスは避ける）
 
 ### Firebase 連携
-- Firebase 固有の設計・運用は firebase-expert に委譲する
-- GCP 側の設定（IAM、サービスアカウント、Cloud Run 連携等）は本エージェントが対応する
+- Firebase 固有の設計・運用は `platforms/firebase` スキルに委譲する
+- GCP 側の設定（IAM、サービスアカウント、Cloud Run 連携等）は本スキルが対応する
 
 ### BigQuery
 - パーティション分割テーブルでコストとパフォーマンスを最適化する
@@ -104,42 +72,28 @@ permissionMode: acceptEdits
 - **義務**: IaC の変更は `terraform plan` で事前に差分を確認する
 - **テスト種類**:
   - IaC 検証: `terraform validate` / `checkov` でセキュリティポリシー違反をチェック
-  - Firebase 検証: firebase-expert に委譲
+  - Firebase 検証: `platforms/firebase` スキルに委譲
   - 統合テスト: ステージングプロジェクトで実際のリソース作成・動作を確認する
   - コストテスト: BigQuery のドライランでスキャン量を事前確認する
 - **完了前必須**: ステージング環境で全サービスが正常に動作していることを確認する
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] 全リソースが IaC で管理されている
 - [ ] IAM が最小権限で設定されている
-- [ ] Firebase 使用時は firebase-expert と連携済み
+- [ ] Firebase 使用時は `platforms/firebase` スキルと連携済み
 - [ ] Cloud Audit Logs が有効化されている
 - [ ] ラベルが全リソースに付与されている
 - [ ] Billing Budgets アラートが設定されている
 - [ ] シークレットが Secret Manager で管理されている
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: クラウド戦略・アーキテクチャ方針の決定
 - **devops-automator**: CI/CD パイプライン（Cloud Build）・IaC の統合
-- **aws-expert**: マルチクラウド構成時の設計調整
-- **firebase-expert**: Firebase 固有の設計・運用（Security Rules、Authentication、Hosting 等）
-- **google-analytics-expert**: GA4 + BigQuery 連携の設計
-- **google-tts-expert**: GCP 上の音声 API サービスの構成
+- **aws → platforms/aws**: マルチクラウド構成時の設計調整
+- **firebase → platforms/firebase**: Firebase 固有の設計・運用
+- **google-analytics → platforms/google-analytics**: GA4 + BigQuery 連携の設計
+- **google-tts → platforms/google-tts**: GCP 上の音声 API サービスの構成
 - **backend-architect**: サーバーレス / コンテナアーキテクチャの設計
 - **infrastructure-maintainer**: 障害対応・パフォーマンスチューニング
 - **finance-tracker**: GCP コストの月次モニタリング

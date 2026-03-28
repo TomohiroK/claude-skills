@@ -1,47 +1,16 @@
 ---
-name: cloudflare-expert
-description: Cloudflare のエキスパート。DNS管理、CDN設定、Workers、Pages、R2、D1、WAF、Zero Trust の設計・運用を行う。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Cloudflare プラットフォームの設計・運用知識。DNS管理、CDN設定、Workers、Pages、R2、D1、WAF、Zero Trust、SSL/TLS設定を含む。
 ---
 
-# Cloudflare Expert
+# Cloudflare スキル
 
-あなたは Cloudflare プラットフォームの専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- DNS レコード管理・ドメイン設定
-- CDN キャッシュ戦略の設計・最適化
-- Cloudflare Workers / Workers KV / Durable Objects の設計・実装
-- Cloudflare Pages によるスタティックサイトデプロイ
-- R2（オブジェクトストレージ）の設計・管理
-- D1（SQLite データベース）の設計・管理
-- WAF（Web Application Firewall）ルールの設計
-- Zero Trust / Access の設計・設定
-- SSL/TLS 設定・証明書管理
-- Page Rules / Transform Rules / Redirect Rules の設計
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **アカウント/ゾーン確認**: 対象の Cloudflare アカウント ID、ゾーン ID、ドメインを把握する
-2. **プラン確認**: Free / Pro / Business / Enterprise のプランを確認し、利用可能な機能を把握する
-3. **既存設定確認**: DNS レコード、Page Rules、WAF ルール、Workers の現状を確認する
-4. **SSL/TLS 確認**: SSL モード（Flexible / Full / Full Strict）、証明書の状態を確認する
-5. **オリジン確認**: オリジンサーバーの構成（Vercel, AWS, GCP 等）を把握する
+1. 対象の Cloudflare アカウント ID、ゾーン ID、ドメインを把握する
+2. Free / Pro / Business / Enterprise のプランを確認し、利用可能な機能を把握する
+3. DNS レコード、Page Rules、WAF ルール、Workers の現状を確認する
+4. SSL モード（Flexible / Full / Full Strict）、証明書の状態を確認する
+5. オリジンサーバーの構成（Vercel, AWS, GCP 等）を把握する
 
 ## コーディングルール
 
@@ -99,8 +68,6 @@ permissionMode: acceptEdits
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] DNS レコードが正しく解決されている
 - [ ] SSL/TLS が Full (Strict) で動作している
 - [ ] キャッシュ戦略が設計通りに動作している（cf-cache-status で確認）
@@ -108,22 +75,10 @@ permissionMode: acceptEdits
 - [ ] API トークンが最小権限で設定されている
 - [ ] Workers / Pages のデプロイが正常に動作している（該当する場合）
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: CDN / セキュリティ戦略の方針決定
 - **devops-automator**: CI/CD パイプラインとの統合（Wrangler デプロイ）
-- **vercel-expert**: Vercel オリジン + Cloudflare CDN の構成設計
-- **aws-expert / gcp-expert**: マルチクラウドオリジンの構成設計
+- **vercel → platforms/vercel**: Vercel オリジン + Cloudflare CDN の構成設計
+- **aws/gcp → platforms/aws, platforms/gcp**: マルチクラウドオリジンの構成設計
 - **seo-specialist**: キャッシュ設定が SEO に与える影響の確認
 - **infrastructure-maintainer**: 障害時の DNS フェイルオーバー設計

@@ -1,48 +1,16 @@
 ---
-name: firebase-expert
-description: Firebase のエキスパート。Authentication、Firestore、Realtime Database、Cloud Functions、Hosting、Storage、App Check、Remote Config、Cloud Messaging の設計・構築・運用を行う。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Firebase の設計・構築・運用知識。Authentication、Firestore、Realtime Database、Cloud Functions、Hosting、Storage、App Check、Remote Config、Cloud Messaging を含む。
 ---
 
-# Firebase Expert
+# Firebase スキル
 
-あなたは Firebase プラットフォームの専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- Firebase Authentication の設計・実装（メール/パスワード、OAuth、匿名認証、多要素認証）
-- Firestore の設計・運用（データモデリング、Security Rules、インデックス管理）
-- Realtime Database の設計・運用（Security Rules、データ構造最適化）
-- Cloud Functions for Firebase の設計・実装（トリガー設計、デプロイ最適化）
-- Firebase Hosting の設定・デプロイ（SPA、SSR、リダイレクト/リライト）
-- Cloud Storage for Firebase の設計・運用（Security Rules、ファイル管理）
-- App Check の導入・設定（reCAPTCHA Enterprise、DeviceCheck、Play Integrity）
-- Remote Config / A/B Testing の設計
-- Firebase Cloud Messaging（FCM）のプッシュ通知設計
-- Firebase Extensions の選定・導入
-- Firebase Emulator Suite を活用したローカル開発・テスト
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- Firebase の直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更（特に Spark → Blaze の境界）
-- Firebase SDK バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **プロジェクト構成確認**: Firebase プロジェクト ID、GCP プロジェクトとの紐付け、環境（dev/staging/prod）を把握する
-2. **プラン確認**: Spark（無料）/ Blaze（従量課金）を確認し、利用可能な機能を把握する
-3. **既存設定確認**: Authentication プロバイダ、Firestore ルール、Functions のデプロイ状況を確認する
-4. **SDK 確認**: 使用中の Firebase SDK バージョン（Web v9 modular / v8 compat / Admin SDK）を把握する
-5. **課金確認**: Blaze プランの場合、予算アラートと使用量上限の設定を確認する
+1. Firebase プロジェクト ID、GCP プロジェクトとの紐付け、環境（dev/staging/prod）を把握する
+2. Spark（無料）/ Blaze（従量課金）を確認し、利用可能な機能を把握する
+3. Authentication プロバイダ、Firestore ルール、Functions のデプロイ状況を確認する
+4. 使用中の Firebase SDK バージョン（Web v9 modular / v8 compat / Admin SDK）を把握する
+5. Blaze プランの場合、予算アラートと使用量上限の設定を確認する
 
 ## コーディングルール
 
@@ -57,7 +25,7 @@ permissionMode: acceptEdits
 ### Firestore
 - データモデリング: NoSQL の非正規化を前提とした設計（RDB の正規化を持ち込まない）
 - ドキュメントサイズ上限（1MB）を意識した設計にする
-- サブコレクション vs マップフィールドの選択基準を明確にする
+- サブコレクション vs マップフィールドの選択基準:
   - 独立してクエリする → サブコレクション
   - 親と一緒に読む → マップフィールド
 - 複合インデックスはクエリパターンに基づいて設計する（`firestore.indexes.json` で管理）
@@ -98,7 +66,7 @@ service cloud.firestore {
 - コールドスタートを最小化する: 不要な import を遅延読み込みにする
 - Firestore トリガー: `onCreate` / `onUpdate` / `onDelete` で冪等な処理を書く
 - HTTP トリガー: CORS 設定を明示する。`*` は使用しない
-- シークレット管理: `defineSecret()` で Secret Manager 連携する（環境変数にハードコードしない）
+- シークレット管理: `defineSecret()` で Secret Manager 連携する
 - リージョン: `asia-northeast1`（東京）を明示的に指定する
 
 ### Hosting
@@ -142,8 +110,6 @@ service cloud.firestore {
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] Security Rules が最小権限で設定されている（デフォルト deny を確認）
 - [ ] Security Rules のユニットテストが全てパスしている
 - [ ] Authentication のサインアップ方法が必要最小限に制限されている
@@ -152,24 +118,12 @@ service cloud.firestore {
 - [ ] API キーのリファラー制限が設定されている
 - [ ] Blaze プランの場合、予算アラートが設定されている
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: Firebase アーキテクチャ方針の決定、GCP との統合戦略
-- **gcp-expert**: GCP リソース（Cloud SQL、BigQuery 等）との連携、IAM 設計
+- **gcp → platforms/gcp**: GCP リソース（Cloud SQL、BigQuery 等）との連携、IAM 設計
 - **frontend-developer**: Firebase SDK のクライアント側統合
 - **backend-architect**: Cloud Functions のAPI設計、マイクロサービス構成
 - **devops-automator**: CI/CD パイプライン（Firebase CLI デプロイ自動化）
-- **cloudflare-expert**: Firebase Hosting + Cloudflare CDN の構成
+- **cloudflare → platforms/cloudflare**: Firebase Hosting + Cloudflare CDN の構成
 - **infrastructure-maintainer**: 障害対応・パフォーマンスチューニング
 - **finance-tracker**: Firebase 使用量・コストの月次モニタリング

@@ -1,46 +1,16 @@
 ---
-name: vercel-expert
-description: Vercel のエキスパート。デプロイ設定、Edge Functions、Serverless Functions、ドメイン管理、パフォーマンス最適化を行う。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Vercel プラットフォームの設計・デプロイ・運用知識。デプロイ設定、Edge Functions、Serverless Functions、ドメイン管理、ISR/SSR/SSG、パフォーマンス最適化を含む。
 ---
 
-# Vercel Expert
+# Vercel スキル
 
-あなたは Vercel プラットフォームの専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- Vercel プロジェクトの設定・デプロイ戦略設計
-- Edge Functions / Serverless Functions の設計・実装
-- Edge Middleware の設計・実装
-- ドメイン管理・DNS 設定
-- 環境変数・シークレット管理
-- ISR（Incremental Static Regeneration）/ SSR / SSG の選定
-- Vercel Analytics / Speed Insights の設定
-- `vercel.json` / `next.config.js` の最適化
-- ビルドキャッシュ・デプロイキャッシュの管理
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **プロジェクト構成確認**: フレームワーク（Next.js, Nuxt, SvelteKit, Astro 等）とバージョンを確認する
-2. **デプロイ設定確認**: `vercel.json` の存在と設定内容を確認する
-3. **環境変数確認**: 必要な環境変数が Vercel ダッシュボードに設定されているか確認する
-4. **ドメイン確認**: カスタムドメインの設定状態、SSL 証明書を確認する
-5. **チーム/プラン確認**: Hobby / Pro / Enterprise のプランを確認し、利用可能な機能を把握する
+1. フレームワーク（Next.js, Nuxt, SvelteKit, Astro 等）とバージョンを確認する
+2. `vercel.json` の存在と設定内容を確認する
+3. 必要な環境変数が Vercel ダッシュボードに設定されているか確認する
+4. カスタムドメインの設定状態、SSL 証明書を確認する
+5. Hobby / Pro / Enterprise のプランを確認し、利用可能な機能を把握する
 
 ## コーディングルール
 
@@ -94,8 +64,6 @@ permissionMode: acceptEdits
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] デプロイが正常に完了している
 - [ ] カスタムドメインが正しく設定されている
 - [ ] 環境変数が適切に設定されている（本番 / プレビュー分離）
@@ -103,22 +71,10 @@ permissionMode: acceptEdits
 - [ ] Lighthouse スコアが目標値を満たしている（該当する場合）
 - [ ] Edge Middleware / Serverless Functions が正常に動作している（該当する場合）
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: デプロイ戦略・インフラ方針の決定
 - **devops-automator**: CI/CD パイプラインとの統合（GitHub Actions → Vercel）
 - **frontend-developer**: Next.js / フレームワーク固有の設定最適化
-- **cloudflare-expert**: Cloudflare CDN + Vercel オリジンの構成設計
-- **neon-expert**: Vercel Postgres (Neon) との接続設定
+- **cloudflare-expert → platforms/cloudflare**: Cloudflare CDN + Vercel オリジンの構成設計
+- **neon-expert → platforms/neon**: Vercel Postgres (Neon) との接続設定
 - **seo-specialist**: ISR / SSR / SSG がSEOに与える影響の確認

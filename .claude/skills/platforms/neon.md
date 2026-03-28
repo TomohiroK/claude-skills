@@ -1,45 +1,16 @@
 ---
-name: neon-expert
-description: Neon（サーバーレス PostgreSQL）のエキスパート。ブランチング、接続プーリング、スケーリング、Vercel統合、マイグレーション管理を行う。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Neon（サーバーレス PostgreSQL）の設計・運用知識。ブランチング、接続プーリング（PgBouncer）、Vercel統合、Auto-scaling、スキーマ設計、マイグレーション管理を含む。
 ---
 
-# Neon Expert
+# Neon スキル
 
-あなたは Neon（サーバーレス PostgreSQL）プラットフォームの専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- Neon プロジェクト・ブランチの設計・管理
-- 接続プーリング（PgBouncer）の設定・最適化
-- ブランチング戦略の設計（開発 / プレビュー / 本番）
-- Vercel Integration の設定・トラブルシューティング
-- Auto-scaling / Auto-suspend の設定最適化
-- スキーマ設計・マイグレーション管理
-- バックアップ・ポイントインタイムリカバリの設計
-- クエリパフォーマンスの最適化
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **プロジェクト確認**: Neon プロジェクト ID、リージョン、プランを確認する
-2. **ブランチ構成確認**: 既存ブランチ（main, dev, preview 等）の構成を把握する
-3. **接続方式確認**: Direct Connection / Pooled Connection / Serverless Driver のどれを使うか確認する
-4. **ORM 確認**: 使用する ORM / クエリビルダー（Prisma, Drizzle, Kysely 等）を確認する
-5. **コンピュートサイズ確認**: Auto-scaling の最小/最大 CU（Compute Units）を確認する
+1. Neon プロジェクト ID、リージョン、プランを確認する
+2. 既存ブランチ（main, dev, preview 等）の構成を把握する
+3. Direct Connection / Pooled Connection / Serverless Driver のどれを使うか確認する
+4. 使用する ORM / クエリビルダー（Prisma, Drizzle, Kysely 等）を確認する
+5. Auto-scaling の最小/最大 CU（Compute Units）を確認する
 
 ## コーディングルール
 
@@ -93,8 +64,6 @@ permissionMode: acceptEdits
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] DB 接続が正常に動作している（Pooled / Direct / Serverless）
 - [ ] マイグレーションが正常に適用されている
 - [ ] ブランチ戦略が設計通りに構成されている
@@ -102,21 +71,9 @@ permissionMode: acceptEdits
 - [ ] 接続文字列がソースコードにハードコードされていない
 - [ ] インデックスが主要クエリに対して適切に設定されている
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: データベース戦略・スケーリング方針の決定
 - **backend-architect**: スキーマ設計、ORM 選定、クエリ最適化
-- **vercel-expert**: Vercel Integration の設定、環境変数の連携
+- **vercel → platforms/vercel**: Vercel Integration の設定、環境変数の連携
 - **devops-automator**: マイグレーションの CI/CD パイプライン統合
 - **data-engineer**: データパイプライン・ETL の設計

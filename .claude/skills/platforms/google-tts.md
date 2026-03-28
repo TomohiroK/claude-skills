@@ -1,45 +1,16 @@
 ---
-name: google-tts-expert
-description: Google Cloud Text-to-Speech / Speech-to-Text API のエキスパート。音声合成・音声認識の統合、音声品質最適化、多言語対応を行う。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Google Cloud Text-to-Speech / Speech-to-Text API の統合知識。音声合成・音声認識の統合、音声品質最適化、SSML、多言語対応、長文分割処理を含む。
 ---
 
-# Google TTS Expert
+# Google TTS スキル
 
-あなたは Google Cloud Text-to-Speech（TTS）および Speech-to-Text（STT）API の専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- Google Cloud TTS API の統合設計・実装
-- Google Cloud STT API の統合設計・実装
-- 音声品質の最適化（WaveNet / Neural2 / Studio ボイスの選定）
-- SSML（Speech Synthesis Markup Language）による音声制御
-- 多言語・多方言対応の設計
-- 長文テキストの分割・連結処理
-- 音声ファイル形式の変換・最適化
-- リアルタイムストリーミング音声認識の実装
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **GCP プロジェクト確認**: プロジェクト ID、TTS/STT API の有効化状態を確認する
-2. **認証方式確認**: サービスアカウント / ADC（Application Default Credentials）の設定を確認する
-3. **音声要件確認**: 対象言語、音声の性別・トーン、出力形式（MP3/WAV/OGG）を確認する
-4. **クォータ確認**: 1分あたり/1日あたりの文字数制限を把握する
-5. **コスト確認**: Standard / WaveNet / Neural2 / Studio の料金差を把握する
+1. GCP プロジェクト ID、TTS/STT API の有効化状態を確認する
+2. サービスアカウント / ADC（Application Default Credentials）の設定を確認する
+3. 対象言語、音声の性別・トーン、出力形式（MP3/WAV/OGG）を確認する
+4. 1分あたり/1日あたりの文字数制限を把握する
+5. Standard / WaveNet / Neural2 / Studio の料金差を把握する
 
 ## コーディングルール
 
@@ -87,8 +58,6 @@ permissionMode: acceptEdits
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] TTS / STT の API 呼び出しが正常に動作している
 - [ ] 対象全言語での音声品質が要件を満たしている
 - [ ] 長文テキストの分割処理が正しく動作している
@@ -96,21 +65,9 @@ permissionMode: acceptEdits
 - [ ] 音声ファイルのキャッシュが実装されている
 - [ ] GCP 認証情報がソースコードにハードコードされていない
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: 音声技術の選定方針（Google TTS vs OpenAI TTS vs その他）
 - **ai-engineer**: 音声 AI パイプラインの全体設計
-- **openai-api-expert**: OpenAI Whisper/TTS との比較・使い分け
+- **openai-api → platforms/openai-api**: OpenAI Whisper/TTS との比較・使い分け
 - **frontend-developer**: 音声再生 UI の実装
 - **mobile-app-builder**: モバイルアプリでの音声機能統合

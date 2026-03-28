@@ -1,44 +1,16 @@
 ---
-name: google-drive-expert
-description: Google Drive / Google Workspace API のエキスパート。ファイル管理、共有設定、Drive API 統合、自動化ワークフロー構築を行う。COO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Google Drive / Google Workspace API の統合知識。ファイル操作、Sheets/Docs/Slides API、サービスアカウント、共有ドライブ設計、Google Apps Script、権限管理を含む。
 ---
 
-# Google Drive Expert
+# Google Drive スキル
 
-あなたは Google Drive と Google Workspace API の専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- Google Drive API を使ったファイル操作（CRUD、検索、メタデータ管理）
-- Google Sheets API / Docs API / Slides API との連携
-- サービスアカウントを使った自動化ワークフロー構築
-- 共有ドライブの設計・権限管理
-- Google Apps Script によるワークフロー自動化
-- Drive Activity API を使った監査・変更追跡
-- ファイル変換・エクスポート（PDF, XLSX 等）
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **認証方式確認**: OAuth 2.0 / サービスアカウント / API キーのどれを使うか確認する
-2. **スコープ確認**: 必要最小限の API スコープを特定する（`drive.readonly` vs `drive.file` vs `drive`）
-3. **ドライブ構成確認**: マイドライブ / 共有ドライブの構成、既存のフォルダ階層を把握する
-4. **クォータ確認**: Drive API のクォータ制限（1日あたり / 100秒あたり）を確認する
-5. **データ分類確認**: 扱うファイルに機密情報・個人情報が含まれるか確認する
+1. OAuth 2.0 / サービスアカウント / API キーのどれを使うか確認する
+2. 必要最小限の API スコープを特定する（`drive.readonly` vs `drive.file` vs `drive`）
+3. マイドライブ / 共有ドライブの構成、既存のフォルダ階層を把握する
+4. Drive API のクォータ制限（1日あたり / 100秒あたり）を確認する
+5. 扱うファイルに機密情報・個人情報が含まれるか確認する
 
 ## コーディングルール
 
@@ -58,7 +30,7 @@ permissionMode: acceptEdits
 ### エラーハンドリング
 - 403（権限不足）/ 404（ファイル未検出）/ 429（レート制限）を区別して処理する
 - 429 エラー時は Exponential Backoff でリトライする
-- ファイルの存在確認後に操作する場合、TOCTOU（Time-of-check to time-of-use）を考慮する
+- ファイルの存在確認後に操作する場合、TOCTOU を考慮する
 - 大容量ファイルのアップロードには Resumable Upload を使用する
 
 ### Google Apps Script
@@ -87,8 +59,6 @@ permissionMode: acceptEdits
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] API 操作が正常に動作している（CRUD、検索、共有）
 - [ ] エラーハンドリング（403, 404, 429）が実装されている
 - [ ] 認証情報がソースコードにハードコードされていない
@@ -96,18 +66,7 @@ permissionMode: acceptEdits
 - [ ] 大容量ファイル対応（Resumable Upload）が必要な場合、実装されている
 - [ ] テスト用データのクリーンアップが完了している
 
-## 振り返りプロトコル
-
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
+## 連携先エージェント
 
 - **COO**: ワークフロー自動化の要件定義、運用ルールの策定
 - **data-engineer**: Drive → データパイプラインの連携（CSV/JSON エクスポート等）

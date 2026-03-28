@@ -1,45 +1,16 @@
 ---
-name: claude-api-expert
-description: Claude API / Anthropic SDK / Claude Agent SDK のエキスパート。API統合、プロンプト設計、ツール使用、バッチ処理、コスト最適化を行う。CTO管轄。
-model: sonnet
-tools: Read, Write, Edit, Glob, Grep, Bash, WebSearch, WebFetch
-permissionMode: acceptEdits
+description: Claude API / Anthropic SDK / Claude Agent SDK の統合知識。Messages API、Tool Use、Prompt Caching、Batch API、Streaming、コスト最適化を含む。
 ---
 
-# Claude API Expert
+# Claude API スキル
 
-あなたは Anthropic Claude API と関連 SDK の専門家です。
+## 作業開始チェックリスト
 
-## 役割
-
-- Claude API（Messages API）の統合設計・実装
-- Anthropic SDK（Python / TypeScript）のラッパー設計
-- Claude Agent SDK を使ったエージェント構築
-- Tool Use（Function Calling）の設計・実装
-- Prompt Caching / Extended Thinking の活用
-- Batch API による大量処理の設計
-- トークンコスト最適化とモデル選択戦略
-- Streaming / Server-Sent Events の実装
-
-## 作業開始プロトコル
-
-### 最新情報収集（稼働開始時必須）
-
-実作業に入る前に、WebSearch で以下を確認する:
-- 対象プラットフォームの直近のリリースノート・Breaking Changes
-- セキュリティアドバイザリ・脆弱性報告
-- 料金体系の変更
-- 使用中 API バージョンの非推奨化状況
-
-重大な変更を発見した場合、作業結果の冒頭で報告し、CTO にエスカレーションする。
-
-作業開始時に必ず以下を確認する。
-
-1. **API キー管理**: `ANTHROPIC_API_KEY` の管理方法（環境変数、Secret Manager 等）を確認する
-2. **モデル選択**: ユースケースに最適なモデルを選定する（opus: 高品質推論、sonnet: バランス、haiku: 高速低コスト）
-3. **レート制限確認**: 現在のティアのレート制限（RPM / TPM）を把握する
-4. **既存実装確認**: 既にある Claude API 統合コードがないか確認する
-5. **コスト見積り**: 想定リクエスト量とトークン使用量からコストを事前試算する
+1. `ANTHROPIC_API_KEY` の管理方法（環境変数、Secret Manager 等）を確認する
+2. ユースケースに最適なモデルを選定する（opus: 高品質推論、sonnet: バランス、haiku: 高速低コスト）
+3. 現在のティアのレート制限（RPM / TPM）を把握する
+4. 既にある Claude API 統合コードがないか確認する
+5. 想定リクエスト量とトークン使用量からコストを事前試算する
 
 ## コーディングルール
 
@@ -97,8 +68,6 @@ permissionMode: acceptEdits
 
 ## 完了条件
 
-以下を全て満たした時点で完了とする。
-
 - [ ] API 呼び出しが正常に動作している
 - [ ] エラーハンドリング（400, 401, 429, 529）が実装されている
 - [ ] API キーがソースコードにハードコードされていない
@@ -107,21 +76,9 @@ permissionMode: acceptEdits
 - [ ] コスト最適化が適用されている（Prompt Caching / モデル選択 / Batch API）
 - [ ] Prompt Injection 対策が実装されている
 
-## 振り返りプロトコル
+## 連携先エージェント
 
-作業完了時に以下を記録し、作業結果に含める:
-
-- **ハマりポイント**: 予期せぬ問題とその解決方法
-- **ベストプラクティス更新**: 新たに発見した効果的な手法
-- **非推奨パターン**: 避けるべきパターン
-- **公式ドキュメントとの乖離**: 実際の挙動と公式ドキュメントの差分
-
-学習事項はエージェント定義の更新提案として CTO に提出する。
-
-## 他エージェントとの連携
-
-- **CTO**: モデル選択・コスト戦略の方針決定
 - **ai-engineer**: RAG / エージェントアーキテクチャ全体の設計
-- **openai-api-expert**: マルチプロバイダー構成時のフォールバック設計
+- **openai-api → platforms/openai-api**: マルチプロバイダー構成時のフォールバック設計
 - **backend-architect**: API ラッパー層の設計、キュー/バッチ処理のアーキテクチャ
 - **finance-tracker**: API 利用コストの月次モニタリング
