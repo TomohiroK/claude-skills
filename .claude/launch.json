@@ -30,6 +30,12 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8093", "--directory", "/Users/tomohirok/Documents/Github/claude-works/bridgenote"],
       "port": 8093
+    },
+    {
+      "name": "corporate-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8094", "--directory", "/Users/tomohirok/Documents/Github/corporate-site"],
+      "port": 8094
     }
   ]
 }

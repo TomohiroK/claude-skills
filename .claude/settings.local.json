@@ -50,7 +50,26 @@
       "Bash(git check-ignore:*)",
       "Bash(git -C /Users/tomohirok/Documents/Github/claude-skills log --oneline -5 --stat)",
       "Bash(git -C /Users/tomohirok/Documents/Github/claude-skills push origin main)",
-      "Bash(grep -E \"\\\\.\\(ts|tsx|json\\)$\")"
+      "Bash(grep -E \"\\\\.\\(ts|tsx|json\\)$\")",
+      "Bash(curl -svL https://corp.tmkproduct.com)",
+      "Bash(dig corp.tmkproduct.com A +short)",
+      "Bash(curl -sL https://corp.tmkproduct.com)",
+      "WebFetch(domain:corp.tmkproduct.com)",
+      "WebFetch(domain:www.figma.com)",
+      "Read(//Users/tomohirok/Documents/Github/claude-works/**)",
+      "Bash(mkdir -p /Users/tomohirok/Documents/Github/claude-works/)",
+      "Bash(gh pr:*)",
+      "Bash(git push:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "mcp__playwright__browser_resize",
+      "mcp__playwright__browser_evaluate",
+      "mcp__scheduled-tasks__list_scheduled_tasks",
+      "Bash(pkill -f \"python3 -m http.server 8099\")",
+      "Bash(pkill -f \"python3 -m http.server 8098\")",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://corp.tmkproduct.com/images/ogp/ogp-default.png)"
     ]
   }
 }

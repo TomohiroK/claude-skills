@@ -109,3 +109,19 @@
 ### import の整理
 - 標準ライブラリ → 外部パッケージ → 内部モジュールの順に並べる
 - グループ間に空行を入れる
+
+## セキュリティ — DOM操作
+
+### innerHTML による動的描画の原則禁止
+- 外部データ（JSON、APIレスポンス、ユーザー入力）を DOM に描画する場合、`innerHTML` を使わない
+- `textContent` + `createElement` で要素を構築する
+- Bad: `container.innerHTML = '<h3>' + data.title + '</h3>'`
+- Good: `const h3 = document.createElement('h3'); h3.textContent = data.title;`
+
+### 動的URLの構築時はサニタイズする
+- ユーザー由来の値（slug、ID等）をURLパスに含める場合、許可文字のみ通すフィルタを適用する
+- Bad: `href = '/articles/' + slug + '.html'`
+- Good: `href = '/articles/' + slug.replace(/[^a-z0-9-]/g, '') + '.html'`
+
+### 発生事例（2026-03-28）
+corp.tmkproduct.com の Insights セクションで articles.json を innerHTML で描画していた。コードレビューでXSS脆弱性とパストラバーサルを検出し、textContent + createElement + slug sanitize に修正
