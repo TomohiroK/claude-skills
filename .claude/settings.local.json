@@ -69,7 +69,22 @@
       "mcp__scheduled-tasks__list_scheduled_tasks",
       "Bash(pkill -f \"python3 -m http.server 8099\")",
       "Bash(pkill -f \"python3 -m http.server 8098\")",
-      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://corp.tmkproduct.com/images/ogp/ogp-default.png)"
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" https://corp.tmkproduct.com/images/ogp/ogp-default.png)",
+      "Bash(grep -E \"\\\\.ts$\")",
+      "Bash(grep -r \"article\\\\|schedule\\\\|cron\\\\|auto\" /Users/tomohirok/Documents/Github/corporate-site --include=*.js --include=*.py --include=*.json)",
+      "Bash(npm install:*)",
+      "Skill(schedule)",
+      "Skill(schedule:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(mkdir -p src/data/videos)",
+      "Bash(node -e \":*)",
+      "Read(//usr/local/bin/**)",
+      "Bash(npm list:*)",
+      "Bash(CLAUDE_BIN=\"/Users/tomohirok/Library/Application Support/Claude/claude-code/2.1.85/claude.app/Contents/MacOS/claude\")",
+      "Bash(\"$CLAUDE_BIN\" --version)",
+      "Bash(crontab -l)",
+      "Bash(chmod +x /Users/tomohirok/.claude/bin/run-scheduled-task.sh)",
+      "Bash(crontab -)"
     ]
   }
 }
