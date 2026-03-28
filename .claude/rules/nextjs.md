@@ -92,7 +92,23 @@ async rewrites() {
 ## ビルド成功とランタイム正常は別
 
 - `next build` の成功はSSRの正常動作を保証するが、クライアントサイドのランタイムエラーは検出しない
+- **ローカルビルド成功は本番（Vercel）での動作を保証しない** — 特にネイティブ依存ライブラリ
 - 新規コンポーネント追加後は:
   1. `npm run build` でビルド確認
   2. `npm run dev` でブラウザ確認（または curl でSSR確認 + ブラウザでCSR確認）
   3. SSRは正常だがブラウザでエラーが出る場合、Client Component/webpack関連を疑う
+
+## サーバーレス環境でのライブラリ互換性
+
+### Vercel Serverless で動作しないライブラリのパターン
+- **ネイティブバイナリ依存**: `jsdom`, `canvas`, `sharp`（sharpはVercel内蔵で別途対応）等
+- **OS固有API依存**: ファイルシステムの永続書き込み、子プロセス起動等
+- **大きなバンドルサイズ**: サーバーレス関数の50MBサイズ制限を超えるもの
+
+### 新規ライブラリ追加時のチェック（Server Component で使用する場合）
+1. `npm ls <package>` で依存ツリーにネイティブモジュールがないか確認
+2. Vercel公式の既知の非互換リストを確認
+3. 代替手段を検討（例: `isomorphic-dompurify` → データ制御下なら不要、`sharp` → `next/image` 内蔵）
+
+### 発生事例（2026-03-28）
+`isomorphic-dompurify`（`jsdom` 依存）をブログのHTML sanitization に採用。ローカルビルド・dev 環境では正常動作したが、Vercel 本番で 500 Internal Server Error。原因: `jsdom` のネイティブ依存がサーバーレスランタイムで利用不可。修正: データが自前 JSON（ユーザー入力経路なし）のため sanitization 自体を削除
