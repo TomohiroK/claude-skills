@@ -36,6 +36,16 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8094", "--directory", "/Users/tomohirok/Documents/Github/corporate-site"],
       "port": 8094
+    },
+    {
+      "name": "echotalk2",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["/Users/tomohirok/Documents/Github/claude-works/echotalk2/server.js"],
+      "port": 9080,
+      "env": {
+        "HTTP_PORT": "9080",
+        "WS_PORT": "9082"
+      }
     }
   ]
 }
