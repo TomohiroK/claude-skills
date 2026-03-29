@@ -104,7 +104,9 @@
       "WebFetch(domain:github.com)",
       "WebFetch(domain:api.github.com)",
       "Bash(node -e \"const WebSocket=require\\(''ws''\\);const ws=new WebSocket\\(''ws://localhost:8080/ws'',{origin:''http://localhost:3000''}\\);ws.on\\(''open'',\\(\\)=>{console.log\\(''Connected''\\);ws.send\\(JSON.stringify\\({type:''session.start'',mode:''normal''}\\)\\);console.log\\(''Sent''\\)}\\);ws.on\\(''message'',\\(d\\)=>console.log\\(''Msg:'',d.toString\\(\\).substring\\(0,300\\)\\)\\);ws.on\\(''error'',\\(e\\)=>console.log\\(''Err:'',e.message\\)\\);ws.on\\(''close'',\\(c,r\\)=>console.log\\(''Close:'',c,r?.toString\\(\\)\\)\\);setTimeout\\(\\(\\)=>{ws.close\\(\\);process.exit\\(0\\)},15000\\)\")",
-      "Read(//private/tmp/**)"
+      "Read(//private/tmp/**)",
+      "WebFetch(domain:vitest.dev)",
+      "WebFetch(domain:www.pkgpulse.com)"
     ]
   }
 }

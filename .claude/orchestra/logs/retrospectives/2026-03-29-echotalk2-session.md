@@ -112,3 +112,5 @@ EchoTalk2に言語選択機能（英語/インドネシア語/日本語）、戻
 - [x] `development-workflow.md` にマルチラウンドテスト要件 + パニック時プロトコル追加 → 完了
 - [x] 学習ログ 2026-03-29 作成 → 完了
 - [x] メモリ更新（feedback_multiround_test.md, feedback_panic_protocol.md） → 完了
+- [x] `test-harness.md` ルール作成（設計・コーディング・テスト・フィードバック全フェーズ横断） → 完了
+- [x] `development-workflow.md` の Phase 3/6/フィードバック対応にハーネス設計参照を追加 → 完了
