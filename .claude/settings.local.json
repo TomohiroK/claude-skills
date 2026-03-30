@@ -119,7 +119,10 @@
       "Bash(node -c /tmp/talking_check.js)",
       "WebFetch(domain:thenewstack.io)",
       "Bash(node -c seed.js)",
-      "Bash(node -e \"const c=require\\(''crypto''\\); console.log\\(''facility:'', c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)\\); console.log\\(''program:'', c.randomUUID\\(\\)\\);\")"
+      "Bash(node -e \"const c=require\\(''crypto''\\); console.log\\(''facility:'', c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)\\); console.log\\(''program:'', c.randomUUID\\(\\)\\);\")",
+      "Bash(node --check -)",
+      "Read(//Users/tomohirok/Documents/Github/tp-slackbot/**)",
+      "Bash(docker-compose ps:*)"
     ]
   }
 }
