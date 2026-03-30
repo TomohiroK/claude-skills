@@ -106,7 +106,20 @@
       "Bash(node -e \"const WebSocket=require\\(''ws''\\);const ws=new WebSocket\\(''ws://localhost:8080/ws'',{origin:''http://localhost:3000''}\\);ws.on\\(''open'',\\(\\)=>{console.log\\(''Connected''\\);ws.send\\(JSON.stringify\\({type:''session.start'',mode:''normal''}\\)\\);console.log\\(''Sent''\\)}\\);ws.on\\(''message'',\\(d\\)=>console.log\\(''Msg:'',d.toString\\(\\).substring\\(0,300\\)\\)\\);ws.on\\(''error'',\\(e\\)=>console.log\\(''Err:'',e.message\\)\\);ws.on\\(''close'',\\(c,r\\)=>console.log\\(''Close:'',c,r?.toString\\(\\)\\)\\);setTimeout\\(\\(\\)=>{ws.close\\(\\);process.exit\\(0\\)},15000\\)\")",
       "Read(//private/tmp/**)",
       "WebFetch(domain:vitest.dev)",
-      "WebFetch(domain:www.pkgpulse.com)"
+      "WebFetch(domain:www.pkgpulse.com)",
+      "Bash(/Users/tomohirok/.claude/bin/run-scheduled-task.sh 3x3-data-updater)",
+      "Bash(log show:*)",
+      "Bash(mkdir -p /Users/tomohirok/.claude/scheduled-tasks/logs)",
+      "Bash(launchctl load:*)",
+      "Bash(launchctl list:*)",
+      "Bash(crontab -r)",
+      "Bash(\"/Users/tomohirok/Library/Application Support/Claude/claude-code/2.1.85/claude.app/Contents/MacOS/claude\" --help)",
+      "Bash(node --check --input-type=module)",
+      "Bash(sed \"1d;$d\")",
+      "Bash(node -c /tmp/talking_check.js)",
+      "WebFetch(domain:thenewstack.io)",
+      "Bash(node -c seed.js)",
+      "Bash(node -e \"const c=require\\(''crypto''\\); console.log\\(''facility:'', c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)+''-''+c.randomBytes\\(2\\).toString\\(''hex''\\).slice\\(0,4\\)\\); console.log\\(''program:'', c.randomUUID\\(\\)\\);\")"
     ]
   }
 }

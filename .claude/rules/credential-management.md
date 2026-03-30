@@ -64,6 +64,26 @@
 - クレデンシャルをコード内にハードコードしない
 - クレデンシャルを含むファイルを git commit しない
 
+### .gitignore 即時追加ルール（必須）
+
+**クレデンシャルファイルをプロジェクトに配置した時点で、即座に `.gitignore` に追加する。ファイル配置と .gitignore 追加は不可分の1操作として扱う。**
+
+対象ファイル:
+- サービスアカウントキー（`serviceAccountKey.json`, `*-firebase-adminsdk-*.json` 等）
+- `.env`, `.env.*`
+- API キーを含むファイル（`credentials.json`, `*.pem`, `*.key` 等）
+- OAuth クライアントシークレット
+
+手順:
+1. クレデンシャルファイルをプロジェクトにコピー/作成する
+2. **同じ操作の中で** `.gitignore` にファイル名/パターンを追加する
+3. `git status` で対象ファイルが追跡対象外であることを確認する
+
+「後で .gitignore に追加する」は禁止。配置した瞬間に追加する。
+
+#### 発生事例（2026-03-29）
+kensyunavi プロジェクトで Firebase サービスアカウントキーを `serviceAccountKey.json` にリネームしてコピーしたが、`.gitignore` のパターン（`*-firebase-adminsdk-*.json`）に一致せず、GitHub にプッシュされた。GitHub 側でシークレット検出アラートが発生。リネーム後のファイル名も `.gitignore` に追加する必要があった。
+
 ### クレデンシャルが必要になった場合
 1. `service-account-manager` に注入を依頼する
 2. 注入された `.env` を参照する環境変数としてコードに組み込む
