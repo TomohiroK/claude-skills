@@ -38,6 +38,12 @@
       "port": 8094
     },
     {
+      "name": "referral-banners",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8095", "--directory", "/Users/tomohirok/Documents/Github/claude-works/referral-banners"],
+      "port": 8095
+    },
+    {
       "name": "echotalk2",
       "runtimeExecutable": "node",
       "runtimeArgs": ["/Users/tomohirok/Documents/Github/claude-works/echotalk2/server.js"],
@@ -46,6 +52,18 @@
         "HTTP_PORT": "9080",
         "WS_PORT": "9082"
       }
+    },
+    {
+      "name": "echotalk-lp",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8097", "--directory", "/Users/tomohirok/Documents/Github/talking/static"],
+      "port": 8097
+    },
+    {
+      "name": "training-site",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/Career-Bridge/training-site", "--", "-p", "3001"],
+      "port": 3001
     }
   ]
 }
