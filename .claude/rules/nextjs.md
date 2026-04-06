@@ -112,3 +112,43 @@ async rewrites() {
 
 ### 発生事例（2026-03-28）
 `isomorphic-dompurify`（`jsdom` 依存）をブログのHTML sanitization に採用。ローカルビルド・dev 環境では正常動作したが、Vercel 本番で 500 Internal Server Error。原因: `jsdom` のネイティブ依存がサーバーレスランタイムで利用不可。修正: データが自前 JSON（ユーザー入力経路なし）のため sanitization 自体を削除
+
+## Vercel + Next.js 静的エクスポートで .html ファイルが配信できない
+
+- `public/` に `.html` ファイルを配置しても、Vercel の Next.js 統合がルーティングをインターセプトして 404 になる
+- `.xml`、`.txt`、`.json`、画像ファイル等は正常に配信される。**`.html` だけが問題**
+- `vercel.json` の `cleanUrls`、`routes`、`rewrites` いずれも効かない（Next.js フレームワーク層で処理される）
+- **対策**: `.html` ファイルの配置が必要な場合（Google Search Console 等）は、別の認証方式を使う
+
+| 認証方式 | Vercel + Next.js 静的エクスポート |
+|---------|-------------------------------|
+| HTML ファイル | NG（404になる） |
+| HTML メタタグ | OK（`<head>` に配置） |
+| DNS TXT レコード | OK |
+| Google Analytics | OK（`<head>` に gtag 必須） |
+
+### 発生事例（2026-04-05）
+Google Search Console の所有権確認で `public/google740d965f3ad99c6c.html` を配置。ローカルビルドでは `out/` に正しく出力されたが、Vercel 本番で 404。`cleanUrls: false`、`routes`、`rewrites` を試したが全て無効。HTML メタタグ方式に切り替えて解決。
+
+## Vercel のリダイレクトと curl の -L フラグ
+
+- Vercel は `/about/` → `/about` に 308 リダイレクトする（trailing slash を除去）
+- `curl -s` だけではリダイレクト先を取得しない → 15バイトの空レスポンスが返る
+- **Vercel 上のページを curl で確認する際は必ず `curl -sL` を使う**
+- `-L` なしの結果で「コンテンツが出力されていない」と誤診しない
+
+### 発生事例（2026-04-05）
+GA4 の gtag スクリプトが全ページに出力されているか確認する際、`curl -s https://service.bridgenote.asia/about/` で 0 件と判定。実際には 308 リダイレクト先の `/about` には正しく出力されていた。`-L` フラグなしの誤診により、不要なスクリプト配置変更作業が発生。
+
+## GA4 の next/script strategy と Search Console
+
+- `next/script` の `strategy` によってスクリプトの配置場所が変わる:
+
+| strategy | 配置場所 | Search Console GA 認証 |
+|----------|---------|----------------------|
+| `beforeInteractive` | `<head>` | OK |
+| `afterInteractive` | `<body>`（クライアントサイド注入） | NG |
+| `lazyOnload` | `<body>`（アイドル時注入） | NG |
+
+- Google Search Console の GA 認証は **`<head>` セクションにトラッキングコードがあること** を要求する
+- GA4 を Search Console の認証にも使う場合は `strategy="beforeInteractive"` を指定する

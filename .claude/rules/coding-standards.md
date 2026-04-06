@@ -131,3 +131,26 @@
 
 ### 発生事例（2026-03-28）
 corp.tmkproduct.com の Insights セクションで articles.json を innerHTML で描画していた。コードレビューでXSS脆弱性とパストラバーサルを検出し、textContent + createElement + slug sanitize に修正
+
+## データ品質 — 文字化け（mojibake）チェック
+
+### JSON データファイル書き込み後に U+FFFD チェックを必須とする
+- データファイル（JSON等）を書き込んだ後、U+FFFD（�: replacement character）が含まれていないことを検証する
+- 文字化けはビルド成功では検出されない。明示的なバリデーションが必要
+
+### チェック方法
+```bash
+# 単一ファイル
+python3 -c "with open('file.json') as f: text=f.read(); print('MOJIBAKE FOUND' if '\ufffd' in text else 'Clean')"
+
+# ディレクトリ内の全JSONファイル
+python3 -c "import glob; [print(f) for f in glob.glob('**/*.json', recursive=True) if '\ufffd' in open(f).read()]"
+```
+
+### 適用タイミング
+- スケジュールタスクのバリデーションステップ（SKILL.md）
+- データ追加・更新作業後のコミット前
+- ビルド成功を確認した後、デプロイ前
+
+### 発生事例（2026-04-03）
+3x3-portal のブログ記事（posts.json）に U+FFFD が3箇所含まれた状態でデプロイされた。「整理」→「整xxx」、「実施」→「実xxxx」等の文字化けをユーザーが目視で発見。バリデーションステップに文字化けチェックが含まれていなかったため検出できなかった。

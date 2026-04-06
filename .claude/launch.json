@@ -64,6 +64,12 @@
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/Career-Bridge/training-site", "--", "-p", "3001"],
       "port": 3001
+    },
+    {
+      "name": "bridgenote-site",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && npm run dev --prefix /Users/tomohirok/Documents/Github/claude-works/bridgenote-site -- -p 3002"],
+      "port": 3002
     }
   ]
 }

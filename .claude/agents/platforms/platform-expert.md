@@ -100,6 +100,12 @@ permissionMode: acceptEdits
 ### 計測・分析基盤
 `google-analytics` + `gcp`(BigQuery) → 計測 + 集約
 
+### GA4 MCP 経由のデータ分析
+`google-analytics`（MCP: `analytics-mcp`）→ GA4 データを直接取得・分析
+- `get_account_summaries` で対象プロパティを選択（複数アカウント対応）
+- `run_report` / `run_realtime_report` でデータ取得
+- `analytics-reporter` に分析結果を引き渡してレポート作成
+
 ## 他エージェントとの連携
 
 - **CTO**: プラットフォーム選定・アーキテクチャ方針の決定
