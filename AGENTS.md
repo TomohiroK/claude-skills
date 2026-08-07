@@ -1,12 +1,12 @@
-# Claude Skills
+# Codex Skills
 
 ## このリポジトリについて
-Claude Code のサブエージェント組織（70名）を管理するリポジトリ。
+Codex のサブエージェント組織（70名）を管理するリポジトリ。
 CxOボード（orchestra）による振り返り・改善サイクルを持つ。
 
 ## ディレクトリ構成
 ```
-.claude/
+.Codex/
 ├── agents/                    # エージェント定義（70名）
 │   ├── engineering/           # 10名
 │   ├── platforms/             # 11名（外部サービスエキスパート）
@@ -40,26 +40,26 @@ brand/                         # ブランド素材（Ledgea）
 - `/project:new-project [name]` — 新規プロジェクト開始
 
 ## platforms フェーズ投入（2026-03-27 ボード決定）
-- **Phase 1（即稼働）**: vercel-expert, cloudflare-expert, neon-expert, claude-api-expert, google-analytics-expert, service-account-manager
+- **Phase 1（即稼働）**: vercel-expert, cloudflare-expert, neon-expert, Codex-api-expert, google-analytics-expert, service-account-manager
 - **Phase 2（実需発生時稼働）**: aws-expert, gcp-expert, firebase-expert, openai-api-expert, google-tts-expert, google-drive-expert
 
 ## クレデンシャル管理
-- Vault: ~/.claude-vault/（service-account-manager 専用、他エージェントアクセス禁止）
-- クレデンシャルは Claude 会話上で受け渡さない。inbox/ フォルダ経由で暗号化する
-- 詳細: `.claude/rules/credential-management.md`
+- Vault: ~/.Codex-vault/（service-account-manager 専用、他エージェントアクセス禁止）
+- クレデンシャルは Codex 会話上で受け渡さない。inbox/ フォルダ経由で暗号化する
+- 詳細: `.Codex/rules/credential-management.md`
 
 ## Deep Think 必須（最重要）
 - 全タスクは Deep Think から始める。例外なし
 - 「簡単そう」と判断した瞬間にその判断が浅慮
 - 新規リポジトリに触れる前に README + インフラ設定ファイル（render.yaml/vercel.json/.github/workflows 等）を必ず棚卸し
 - 不可逆操作（git push / deploy / docker push / rm / DROP 等）の前は必ず再 Deep Think し、ユーザー確認を取る
-- 詳細: `.claude/rules/deep-think.md`
+- 詳細: `.Codex/rules/deep-think.md`
 
 ## ローカル検証 → push 順序（最重要）
 - `git push` はローカル稼働確認が完了したコードにのみ許される
 - push してからローカル起動は素人中の素人。順序を逆にしない
-- 詳細: `.claude/rules/local-first-then-push.md`
+- 詳細: `.Codex/rules/local-first-then-push.md`
 
 ## 作業ディレクトリ
-- 全作業: /Users/tomohirok/Documents/Github/claude-works/{project}/
-- ブランド素材: /Users/tomohirok/Documents/Github/claude-skills/brand/
+- 全作業: /Users/tomohirok/Documents/Github/Codex-works/{project}/
+- ブランド素材: /Users/tomohirok/Documents/Github/Codex-skills/brand/

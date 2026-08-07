@@ -1,5 +1,25 @@
 # API / SDK 開発ルール
 
+## データベース制約設計 — 制約は対応コードと合うものだけ置く
+
+### 原則
+DB制約（UNIQUE INDEX、CHECK、partial index等）は、**その制約に対応するコードがクリーンに書ける場合のみ**作る。
+
+- コード側が制約を扱えない・扱う気がない・面倒なworkaroundが必要 → 制約自体を作らない
+- 「ガチガチに制約を入れて、対応コードは適当」は最悪パターン
+- 制約は防御策ではなく、コードと一緒に成立する契約として置く
+
+### 適用手順
+- 新規テーブル/制約を提案するとき: 「この制約を使うコードはどう書く？ON CONFLICTは素直に動く？」を**設計時に**確認する。ORM（GORM等）がpartial unique indexと相性が悪いケースがあることを認識する
+- 動かせないと判明したら、制約を削る方を優先する（コードを歪めない）
+- 既存の制約でハマったとき: workaroundを考える前に「そもそもこの制約は必要か？」を問う。アプリ層で重複制御できるなら制約を消す選択肢を最初に検討する
+- migrationとモデル両方を変更する前に、ユーザーに方針確認を取る（重要設計判断のため）
+
+### 発生事例
+partial UNIQUE INDEX（`WHERE deleted_at IS NULL`）を作ったが、GORMの`clause.OnConflict`でarbiter indexとして推論できず`SQLSTATE 42P10`、回避策で`Where`を入れたら今度は`42702 ambiguous column reference`。制約のためにコードを歪めるのは本末転倒。そもそもこのケースはUNIQUEである必要すらなく、アプリ層で重複を制御する設計の方が自然だった。
+
+投機的にmigration・制約を追加するのは厳禁（`.claude/rules/debugging-discipline.md`参照）。
+
 ## 関数ドキュメントの必須化
 
 ### 全パブリック関数に JSDoc / docstring を書く

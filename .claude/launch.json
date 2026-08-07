@@ -17,7 +17,8 @@
       "name": "3x3-portal",
       "runtimeExecutable": "npm",
       "runtimeArgs": ["run", "dev", "--prefix", "/Users/tomohirok/Documents/Github/3x3-portal/apps/web-next"],
-      "port": 3000
+      "port": 3000,
+      "autoPort": true
     },
     {
       "name": "jobseeker-front",
@@ -39,8 +40,8 @@
     },
     {
       "name": "referral-banners",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8095", "--directory", "/Users/tomohirok/Documents/Github/claude-works/referral-banners"],
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/claude-works/referral-banners && /opt/homebrew/bin/python3 -m http.server 8095"],
       "port": 8095
     },
     {
@@ -70,6 +71,60 @@
       "runtimeExecutable": "/bin/zsh",
       "runtimeArgs": ["-c", "export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && npm run dev --prefix /Users/tomohirok/Documents/Github/claude-works/bridgenote-site -- -p 3002"],
       "port": 3002
+    },
+    {
+      "name": "gunplar-web",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/gunplar-web && export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && npm run dev -- -p 3003"],
+      "port": 3003
+    },
+    {
+      "name": "gunplar-web-as-prod",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/gunplar-web && export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && NEXT_PUBLIC_APP_URL=https://gunplar.com npm run dev -- -p 3004"],
+      "port": 3004
+    },
+    {
+      "name": "bn-workflow-status",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/bn-ai/bn-workflow-status && export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && npm run dev -- -p 3005"],
+      "port": 3005
+    },
+    {
+      "name": "basket-quiz-game",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/claude-works/basket-quiz-game && /opt/homebrew/bin/python3 -m http.server 8096"],
+      "port": 8096
+    },
+    {
+      "name": "prime-jumper",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/claude-works/prime-jumper && /opt/homebrew/bin/python3 -m http.server 8098"],
+      "port": 8098
+    },
+    {
+      "name": "tank-shooter",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/claude-works/tank-shooter && export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && npx vite --port 5180 --strictPort"],
+      "port": 5180
+    },
+    {
+      "name": "game-2048",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/claude-works/game-2048 && /opt/homebrew/bin/python3 -m http.server 8099"],
+      "port": 8099
+    },
+    {
+      "name": "quiz-basketball",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/quiz/quiz-basketball && export PATH=/opt/homebrew/bin:/usr/local/bin:$PATH && npm run dev -- -p 3310"],
+      "port": 3310
+    },
+    {
+      "name": "cashdeposit-client-harness",
+      "runtimeExecutable": "/bin/zsh",
+      "runtimeArgs": ["-c", "cd /Users/tomohirok/Documents/Github/claude-works/cashdeposit-client-autocomplete && /opt/homebrew/bin/python3 -m http.server 8101"],
+      "port": 8101
     }
   ]
 }

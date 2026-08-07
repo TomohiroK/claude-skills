@@ -79,6 +79,56 @@ PHP の `==`/`!=` は型強制を行う。以下のトラップに注意:
 
 根本原因（症状1）を修正すれば、症状2-4は発生条件がなくなる。ただし、根本修正だけでなく各症状のガード（防御的プログラミング）も必要。
 
+## HTML/JS/CSSの要素削除・改変時の影響分析
+
+### ID・クラス・セレクタを削除する前に全参照箇所をgrepする
+HTML要素（id, class）、CSS セレクタ、JS のDOM参照（`$('#xxx')`, `document.getElementById`）を削除・改変する場合、**変更前に**そのIDやクラス名をプロジェクト全体でgrepし、全参照箇所を特定する。
+
+```bash
+# 例: HTML要素を削除する前に、その要素IDの全参照を確認
+grep -rn "alloc-client-dropdown" --include="*.js" --include="*.blade.php" --include="*.css"
+```
+
+### チェック対象
+| 変更内容 | grepすべきもの |
+|---------|---------------|
+| HTML要素のid削除 | `#要素名` を JS, CSS, Blade 全体でgrep |
+| HTML要素のclass削除 | `.クラス名` を JS, CSS, Blade 全体でgrep |
+| data属性の削除 | `data-属性名` を JS, Blade 全体でgrep |
+| JSイベントハンドラの削除 | そのイベントを発火させるHTML要素を確認 |
+| CSS クラスの削除 | そのクラスを使っている HTML/JS を確認 |
+
+### 禁止
+- HTMLテンプレートを「書き直す」際に、既存の要素を影響分析なしで省略すること
+- 「このIDは使っていないだろう」と推測で判断すること — grepで実証する
+
+### クラウドインフラリソースへの一般化（WAF/IAM/セキュリティグループ等）
+
+同じ原則はコードだけでなくクラウドインフラのリソースにも適用される。**WAF Classicのルール、IAMポリシー、セキュリティグループ等は複数の親リソース間で共有されることがある。** 削除・変更前に、対象がどの親リソースから参照されているか全て洗い出す。
+
+```
+例: WAF Classic の Rule/MatchSet はWebACL間で共有される
+  ↓
+Rule「prod-GEO」を含むWebACL一覧を確認する
+  → demo-acl（削除予定） と prod-acl（保持予定）の両方が参照
+  → 「demo-aclから参照を外す」のみ実施し、Rule自体は削除しない
+```
+
+- 削除対象のWebACL/ポリシー/リソース単体だけを見て「使われていない」と判断しない。共有されうる子リソース（Rule, MatchSet, ポリシードキュメント等）は、**全ての親からの参照が無くなって初めて削除可能**と判断する
+- 実際にアタッチ先（ALB、API Gateway等）が存在するかをAPIで確認してから削除計画を立てる。「昔設定したから今は不要なはず」という推測だけで削除しない
+
+## 発生事例（2026-08-04）
+
+本番AWSアカウントのWAF Classicクリーンアップで、削除対象と保持対象のWebACLが同じRule（`prod-GEO`）を共有していることが判明。事前に全WebACLのRule構成をAPIで取得し、共有関係をマッピングしてから削除順序を決定した。事前確認をせずに「不要なWebACLを一括削除」していた場合、保持対象（現役ALBにアタッチ中）が参照するRuleまで誤って削除する可能性があった。
+
+## 発生事例（2026-04-11）
+
+webfront2020 の開残按分モーダル（`_allocation_modal.blade.php`）を書き換えた際、`#alloc-client-dropdown` 要素を含めなかった。JSの `initAutocomplete()` がこの要素にドロップダウンを描画するため、クライアント検索が完全に動作しなくなった。テンプレート書き換え時にJSファイルからの参照をgrepしていれば防げた。
+
 ## 発生事例（2026-04-02）
 
 webfront2020 の PurchaseController で `_isIntegrate()` にガードを追加。update() からの呼び出しは修正目的通りだったが、approval() からの呼び出しでもガードが効き、`$ledgers_base` が未定義になり本番で Whoops エラー。全呼び出し元のトレースを事前に行っていれば防げた。
+
+## 発生事例（2026-04-09）
+
+Career-Bridge jobseeker-front で `openingStaffRecruitment` フィルターのバグ修正中、`removePrefectureTag` で `hasSupportBonus: false` を明示的にセットしたことで新しいバグを作った。`false`（この属性を持たない求人で絞り込む）と `undefined`（フィルター未設定）は全く異なるセマンティクス。修正時は変更先の値のセマンティクスを必ず確認する。参照: `.claude/rules/whitelist-exhaustiveness.md`
