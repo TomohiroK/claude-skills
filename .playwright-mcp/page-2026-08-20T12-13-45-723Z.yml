@@ -1,0 +1,61 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - heading [level=1] [ref=e3]:
+      - img "Bridge Note" [ref=e4]
+    - heading "Log-in" [level=2] [ref=e5]
+    - generic [ref=e6]:
+      - textbox [ref=e7]:
+        - /placeholder: Enter your e-mail
+      - textbox [ref=e8]:
+        - /placeholder: Enter your password
+      - generic [ref=e9]:
+        - checkbox "Keep me signed in" [ref=e10]
+        - text: Keep me signed in
+      - link "Forgot your password?" [ref=e12] [cursor=pointer]:
+        - /url: http://127.0.0.1:18080/login/updaterequest
+      - button "Log-in" [ref=e14] [cursor=pointer]
+  - generic [ref=e15]:
+    - generic [ref=e17]:
+      - generic [ref=e18] [cursor=pointer]
+      - generic [ref=e19]:
+        - generic [ref=e20] [cursor=pointer]:
+          - text: 
+          - generic: Request
+        - text: 
+        - generic [ref=e21] [cursor=pointer]:
+          - text: 
+          - generic: Timeline
+        - text: 
+        - generic [ref=e22] [cursor=pointer]:
+          - text: 
+          - generic: Views
+          - generic [ref=e23]: "3"
+        - generic [ref=e24] [cursor=pointer]:
+          - text: 
+          - generic: Queries
+          - generic [ref=e25]: "6"
+        - generic [ref=e26] [cursor=pointer]:
+          - text: 
+          - generic: Models
+          - generic [ref=e27]: "14"
+        - text:  
+      - generic [ref=e28]:
+        - generic [ref=e29] [cursor=pointer]
+        - generic [ref=e30] [cursor=pointer]
+        - generic [ref=e31] [cursor=pointer]: 
+        - generic [ref=e32] [cursor=pointer]
+        - generic [ref=e33] [cursor=pointer]: 
+        - generic [ref=e34] [cursor=pointer]:
+          - generic: 
+          - generic: 246ms
+        - generic [ref=e35]:
+          - generic: 
+          - generic: 6MB
+        - generic [ref=e36]:
+          - generic: 
+          - generic: 11.x
+        - generic [ref=e37] [cursor=pointer]:
+          - generic: 
+          - generic: "GET login/{token?}"
+    - text:                                                           
+  - text: 

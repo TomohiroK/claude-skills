@@ -1,0 +1,6 @@
+[     533ms] [LOG] JQMIGRATE: Migrate is installed with logging active, version 3.6.0 @ http://127.0.0.1:18080/js/all.js:28082
+[    2810ms] [LOG] Nothing do tutorial20:45:16.535 @ http://127.0.0.1:18080/js/screens/menus/menu.js:30191
+[    3561ms] [LOG] Nothing do tutorial20:45:17.286 @ http://127.0.0.1:18080/js/screens/menus/menu.js:30191
+[   13274ms] [LOG] JQMIGRATE: Migrate is installed with logging active, version 3.6.0 @ http://127.0.0.1:18080/js/all.js:28082
+[   15441ms] [LOG] Nothing do tutorial20:45:29.167 @ http://127.0.0.1:18080/js/screens/menus/menu.js:30191
+[   16155ms] [LOG] Nothing do tutorial20:45:29.880 @ http://127.0.0.1:18080/js/screens/menus/menu.js:30191

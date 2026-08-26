@@ -491,7 +491,11 @@
       "Bash(echo \"exit:$?\")",
       "Bash(sed -n '75,95p' app.py)",
       "Bash(sed -n '555,575p' app.py)",
-      "Bash(aws rds *)"
+      "Bash(aws rds *)",
+      "Bash(cd /Users/tomohirok/Documents/Github/gunplar/gunplar-web && python3 -c \" *)",
+      "Bash(ruby -ryaml -e ' *)",
+      "Bash(printf '0.1.0-draft\\\\n')",
+      "Bash(shasum -a 256 /Users/tomohirok/Documents/Github/gunplar/gunplar-web/contracts/openapi/v1/gunplar.v1.yaml)"
     ]
   }
 }

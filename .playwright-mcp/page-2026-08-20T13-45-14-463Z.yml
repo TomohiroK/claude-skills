@@ -1,0 +1,258 @@
+- generic [active] [ref=f5e1]:
+  - banner [ref=f5e2]:
+    - generic [ref=f5e3]:
+      - link [ref=f5e5] [cursor=pointer]:
+        - /url: http://127.0.0.1:18080/menu/dashboard
+        - img "Bridge Note" [ref=f5e6]
+      - generic [ref=f5e7]:
+        - generic [ref=f5e8]: Copied Company
+        - generic [ref=f5e12]: April 1, 2025 ～ March 31, 2026
+    - generic [ref=f5e16]:
+      - generic [ref=f5e17]:
+        - generic [ref=f5e18]: User
+        - list [ref=f5e19]:
+          - listitem [ref=f5e20] [cursor=pointer]:
+            - img "setting" [ref=f5e21]
+      - img "message" [ref=f5e23]
+  - generic [ref=f5e25]:
+    - list [ref=f5e26]:
+      - listitem [ref=f5e27]
+      - listitem [ref=f5e29]
+      - listitem [ref=f5e31]
+      - listitem [ref=f5e33]
+      - listitem [ref=f5e35]
+      - listitem [ref=f5e37]
+      - listitem [ref=f5e39]
+      - listitem [ref=f5e41]
+    - list [ref=f5e43]:
+      - listitem [ref=f5e44]:
+        - link [ref=f5e46] [cursor=pointer]:
+          - /url: https://service.bridgenote.asia/contact/
+      - listitem [ref=f5e47]:
+        - link [ref=f5e49] [cursor=pointer]:
+          - /url: http://127.0.0.1:18080/menu/help
+      - listitem [ref=f5e50]:
+        - link [ref=f5e52] [cursor=pointer]:
+          - /url: http://127.0.0.1:18080/menu/contact
+      - listitem [ref=f5e53]:
+        - link [ref=f5e55] [cursor=pointer]:
+          - /url: https://service.bridgenote.asia/privacy-policy/
+  - generic [ref=f5e63]:
+    - list [ref=f5e65]:
+      - listitem [ref=f5e66]:
+        - link "Dashboard" [ref=f5e67] [cursor=pointer]:
+          - /url: /menu/dashboard
+      - listitem [ref=f5e69]:
+        - link "Received Invoices" [ref=f5e70] [cursor=pointer]:
+          - /url: /transaction/purchase
+    - generic [ref=f5e72]:
+      - generic [ref=f5e73]:
+        - button "Update" [disabled] [ref=f5e74]
+        - link "Cancel" [ref=f5e75] [cursor=pointer]:
+          - /url: http://127.0.0.1:18080/transaction/purchase
+      - generic [ref=f5e77]:
+        - generic [ref=f5e78]: Entry Expense
+        - generic [ref=f5e80]:
+          - generic [ref=f5e81]:
+            - paragraph [ref=f5e82]: Purchasing Number
+            - textbox [ref=f5e83]: LOCAL-E2E-001
+          - generic [ref=f5e84]:
+            - paragraph [ref=f5e85]: Purchasing Company Name*
+            - generic [ref=f5e86]:
+              - combobox [ref=f5e87]
+              - combobox [ref=f5e90] [cursor=pointer]:
+                - textbox "New ABC 2" [ref=f5e91]
+          - generic [ref=f5e92]:
+            - paragraph [ref=f5e93]: Invoice Name
+            - textbox [ref=f5e94]: Local E2E Test
+          - generic [ref=f5e95]:
+            - paragraph [ref=f5e96]: Invoice Date*
+            - textbox [ref=f5e97]: 06/08/2026
+          - generic [ref=f5e98]:
+            - paragraph [ref=f5e99]: Due Date*
+            - textbox [ref=f5e100]: 31/08/2026
+        - generic [ref=f5e102]:
+          - generic [ref=f5e103]:
+            - paragraph [ref=f5e104]: Currency*
+            - combobox [ref=f5e106]:
+              - option "IDR ( Rp )" [selected]
+              - option "USD ( $ )"
+              - option "JPY ( ￥ )"
+              - option "THB ( ฿ )"
+          - generic [ref=f5e107]:
+            - paragraph [ref=f5e108]: Total Invoice Before Tax*
+            - textbox [ref=f5e109]: 50,000,000
+          - generic [ref=f5e110]:
+            - paragraph [ref=f5e111]: VAT
+            - combobox [ref=f5e113]:
+              - option "－" [selected]
+              - option "10.00%"
+              - option "11.00%"
+              - option "12.00%"
+              - option "1.20%"
+              - option "1.00%"
+              - option "1.10%"
+              - option "0.00%"
+          - generic [ref=f5e114]:
+            - paragraph [ref=f5e115]
+            - textbox [ref=f5e116]: "0"
+          - generic [ref=f5e117]:
+            - paragraph [ref=f5e118]: WHT
+            - combobox [ref=f5e120]:
+              - option "－" [selected]
+              - option "PPH23 2.00%"
+              - option "PPH23 4.00%"
+              - option "PPH23 15.00%"
+              - option "PPH4-2 0.50%"
+              - option "PPH4-2 1.75%"
+              - option "PPH4-2 2.00%"
+              - option "PPH4-2 2.65%"
+              - option "PPH4-2 3.00%"
+              - option "PPH4-2 3.50%"
+              - option "PPH4-2 4.00%"
+              - option "PPH4-2 6.00%"
+              - option "PPH4-2 10.00%"
+              - option "PPH21 2.50%"
+              - option "PPH21 3.00%"
+              - option "PP55 0.50%"
+              - option "PPH26 10.00%"
+              - option "PPH26 15.00%"
+              - option "PPH26 20.00%"
+          - generic [ref=f5e121]:
+            - paragraph [ref=f5e122]
+            - textbox [ref=f5e123]: "0"
+          - generic [ref=f5e124]:
+            - paragraph [ref=f5e125]: Total Invoice Amount
+            - textbox [ref=f5e126]: 50,000,000
+        - generic [ref=f5e127]:
+          - generic [ref=f5e128]: Invoice PDF
+          - generic [ref=f5e129]:
+            - text: Save PDF
+            - table [ref=f5e130]:
+              - rowgroup [ref=f5e131]:
+                - row [ref=f5e132]:
+                  - rowheader [ref=f5e133]
+                  - cell [ref=f5e134]:
+                    - generic [ref=f5e135]:
+                      - textbox "select file..." [ref=f5e136]
+                      - button "Browse" [ref=f5e138] [cursor=pointer]
+                  - cell [ref=f5e139]
+        - generic [ref=f5e141]:
+          - generic [ref=f5e142]:
+            - paragraph [ref=f5e143]: Exchange Rate
+            - textbox [disabled] [ref=f5e144]
+          - generic [ref=f5e145]:
+            - paragraph [ref=f5e146]: Tax Rate
+            - textbox [disabled] [ref=f5e147]
+        - generic [ref=f5e148]:
+          - generic [ref=f5e149]: Enter Journal Information
+          - table [ref=f5e151]:
+            - rowgroup [ref=f5e152]:
+              - row [ref=f5e153]:
+                - columnheader "Account" [ref=f5e154]
+                - columnheader "Sub Account" [ref=f5e155]
+                - columnheader "Division" [ref=f5e156]
+                - columnheader "Project" [ref=f5e157]
+                - columnheader "Amount" [ref=f5e158]
+                - columnheader "Remarks" [ref=f5e159]
+                - columnheader [ref=f5e160]
+            - rowgroup [ref=f5e161]:
+              - row [ref=f5e162]:
+                - columnheader "Input Purchasing Expenses" [ref=f5e163]
+              - row [ref=f5e164]:
+                - cell [ref=f5e165]
+                - cell [ref=f5e166]
+                - cell [ref=f5e167]:
+                  - combobox [ref=f5e169]:
+                    - option "－" [selected]
+                    - option "DIF DIVTEST0528"
+                - cell [ref=f5e170]:
+                  - combobox [ref=f5e172]:
+                    - option "－" [selected]
+                    - option "2024 project new"
+                    - option "A A"
+                    - option "2C PJT0528-001"
+                - cell [ref=f5e173]:
+                  - textbox [ref=f5e174]: 50,000,000
+                - cell [ref=f5e175]:
+                  - textbox [ref=f5e176]
+                - cell [ref=f5e177]
+              - row [ref=f5e179]:
+                - cell "+" [ref=f5e180]
+              - row [ref=f5e182]:
+                - rowheader "Debit Total Amount" [ref=f5e183]
+                - cell "50,000,000" [ref=f5e184]
+                - rowheader [ref=f5e185]
+                - columnheader [ref=f5e186]
+              - row [ref=f5e187]:
+                - columnheader "Input Debt Information" [ref=f5e188]
+              - row [ref=f5e189]:
+                - cell [ref=f5e190]
+                - cell [ref=f5e191]
+                - cell "－" [ref=f5e192]
+                - cell "－" [ref=f5e193]
+                - cell "50,000,000" [ref=f5e194]
+                - cell [ref=f5e195]:
+                  - textbox [ref=f5e196]
+                - cell [ref=f5e197]
+              - row [ref=f5e199]:
+                - rowheader "Total Debt Amount" [ref=f5e200]
+                - cell "50,000,000" [ref=f5e201]
+                - rowheader [ref=f5e202]
+                - columnheader [ref=f5e203]
+            - rowgroup [ref=f5e204]:
+              - row [ref=f5e205]:
+                - columnheader [ref=f5e206]
+        - generic [ref=f5e207]:
+          - button "Update" [disabled] [ref=f5e208]
+          - link "Cancel" [ref=f5e209] [cursor=pointer]:
+            - /url: http://127.0.0.1:18080/transaction/purchase
+  - generic [ref=f5e210]:
+    - generic [ref=f5e212]:
+      - generic [ref=f5e213] [cursor=pointer]
+      - generic [ref=f5e214]:
+        - generic [ref=f5e215] [cursor=pointer]:
+          - text: 
+          - generic: Request
+        - text: 
+        - generic [ref=f5e216] [cursor=pointer]:
+          - text: 
+          - generic: Timeline
+        - text: 
+        - generic [ref=f5e217] [cursor=pointer]:
+          - text: 
+          - generic: Views
+          - generic [ref=f5e218]: "12"
+        - generic [ref=f5e219] [cursor=pointer]:
+          - text: 
+          - generic: Queries
+          - generic [ref=f5e220]: "104"
+        - generic [ref=f5e221] [cursor=pointer]:
+          - text: 
+          - generic: Models
+          - generic [ref=f5e222]: "1045"
+        - text: 
+        - generic [ref=f5e223] [cursor=pointer]:
+          - text: 
+          - generic: Gate
+          - generic [ref=f5e224]: "1"
+      - generic [ref=f5e225]:
+        - generic [ref=f5e226] [cursor=pointer]
+        - generic [ref=f5e227] [cursor=pointer]
+        - generic [ref=f5e228] [cursor=pointer]: 
+        - generic [ref=f5e229] [cursor=pointer]
+        - generic [ref=f5e230] [cursor=pointer]: 
+        - generic [ref=f5e231] [cursor=pointer]:
+          - generic: 
+          - generic: 403ms
+        - generic [ref=f5e232]:
+          - generic: 
+          - generic: 10MB
+        - generic [ref=f5e233]:
+          - generic: 
+          - generic: 11.x
+        - generic [ref=f5e234] [cursor=pointer]:
+          - generic: 
+          - generic: "GET transaction/purchase/edit/{id}"
+    - text:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+  - text: 

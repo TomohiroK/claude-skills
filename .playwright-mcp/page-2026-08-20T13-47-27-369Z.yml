@@ -1,0 +1,261 @@
+- generic [active] [ref=f10e1]:
+  - banner [ref=f10e2]:
+    - generic [ref=f10e3]:
+      - link [ref=f10e5] [cursor=pointer]:
+        - /url: http://127.0.0.1:18080/menu/dashboard
+        - img "Bridge Note" [ref=f10e6]
+      - generic [ref=f10e7]:
+        - generic [ref=f10e8]: Copied Company
+        - generic [ref=f10e12]: April 1, 2025 ～ March 31, 2026
+    - generic [ref=f10e16]:
+      - generic [ref=f10e17]:
+        - generic [ref=f10e18]: User
+        - list [ref=f10e19]:
+          - listitem [ref=f10e20] [cursor=pointer]:
+            - img "setting" [ref=f10e21]
+      - img "message" [ref=f10e23]
+  - generic [ref=f10e25]:
+    - list [ref=f10e26]:
+      - listitem [ref=f10e27]
+      - listitem [ref=f10e29]
+      - listitem [ref=f10e31]
+      - listitem [ref=f10e33]
+      - listitem [ref=f10e35]
+      - listitem [ref=f10e37]
+      - listitem [ref=f10e39]
+      - listitem [ref=f10e41]
+    - list [ref=f10e43]:
+      - listitem [ref=f10e44]:
+        - link [ref=f10e46] [cursor=pointer]:
+          - /url: https://service.bridgenote.asia/contact/
+      - listitem [ref=f10e47]:
+        - link [ref=f10e49] [cursor=pointer]:
+          - /url: http://127.0.0.1:18080/menu/help
+      - listitem [ref=f10e50]:
+        - link [ref=f10e52] [cursor=pointer]:
+          - /url: http://127.0.0.1:18080/menu/contact
+      - listitem [ref=f10e53]:
+        - link [ref=f10e55] [cursor=pointer]:
+          - /url: https://service.bridgenote.asia/privacy-policy/
+  - generic [ref=f10e63]:
+    - list [ref=f10e65]:
+      - listitem [ref=f10e66]:
+        - link "Dashboard" [ref=f10e67] [cursor=pointer]:
+          - /url: /menu/dashboard
+      - listitem [ref=f10e69]:
+        - link "Received Invoices" [ref=f10e70] [cursor=pointer]:
+          - /url: /transaction/purchase
+    - generic [ref=f10e72]:
+      - generic [ref=f10e73]:
+        - button "Update" [disabled] [ref=f10e74]
+        - link "Cancel" [ref=f10e75] [cursor=pointer]:
+          - /url: http://127.0.0.1:18080/transaction/purchase
+      - generic [ref=f10e76]:
+        - generic [ref=f10e77]: The fiscal period that you selected right before is out of range so that it cannot be processed. Please choose fiscal period again to do this function.
+        - generic [ref=f10e78]:
+          - generic [ref=f10e79]: Entry Expense
+          - generic [ref=f10e81]:
+            - generic [ref=f10e82]:
+              - paragraph [ref=f10e83]: Purchasing Number
+              - textbox [ref=f10e84]: LOCAL-E2E-001
+            - generic [ref=f10e85]:
+              - paragraph [ref=f10e86]: Purchasing Company Name*
+              - generic [ref=f10e87]:
+                - combobox [ref=f10e88]
+                - combobox [ref=f10e91] [cursor=pointer]:
+                  - textbox "New ABC 2" [ref=f10e92]
+            - generic [ref=f10e93]:
+              - paragraph [ref=f10e94]: Invoice Name
+              - textbox [ref=f10e95]: Local E2E Test
+            - generic [ref=f10e96]:
+              - paragraph [ref=f10e97]: Invoice Date*
+              - textbox [ref=f10e98]: 06/08/2026
+            - generic [ref=f10e99]:
+              - paragraph [ref=f10e100]: Due Date*
+              - textbox [ref=f10e101]: 31/08/2026
+          - generic [ref=f10e103]:
+            - generic [ref=f10e104]:
+              - paragraph [ref=f10e105]: Currency*
+              - combobox [ref=f10e107]:
+                - option "IDR ( Rp )" [selected]
+                - option "USD ( $ )"
+                - option "JPY ( ￥ )"
+                - option "THB ( ฿ )"
+            - generic [ref=f10e108]:
+              - paragraph [ref=f10e109]: Total Invoice Before Tax*
+              - textbox [ref=f10e110]: 50,000,000
+            - generic [ref=f10e111]:
+              - paragraph [ref=f10e112]: VAT
+              - combobox [ref=f10e114]:
+                - option "－" [selected]
+                - option "10.00%"
+                - option "11.00%"
+                - option "12.00%"
+                - option "1.20%"
+                - option "1.00%"
+                - option "1.10%"
+                - option "0.00%"
+            - generic [ref=f10e115]:
+              - paragraph [ref=f10e116]
+              - textbox [ref=f10e117]: "0"
+            - generic [ref=f10e118]:
+              - paragraph [ref=f10e119]: WHT
+              - combobox [ref=f10e121]:
+                - option "－" [selected]
+                - option "PPH23 2.00%"
+                - option "PPH23 4.00%"
+                - option "PPH23 15.00%"
+                - option "PPH4-2 0.50%"
+                - option "PPH4-2 1.75%"
+                - option "PPH4-2 2.00%"
+                - option "PPH4-2 2.65%"
+                - option "PPH4-2 3.00%"
+                - option "PPH4-2 3.50%"
+                - option "PPH4-2 4.00%"
+                - option "PPH4-2 6.00%"
+                - option "PPH4-2 10.00%"
+                - option "PPH21 2.50%"
+                - option "PPH21 3.00%"
+                - option "PP55 0.50%"
+                - option "PPH26 10.00%"
+                - option "PPH26 15.00%"
+                - option "PPH26 20.00%"
+            - generic [ref=f10e122]:
+              - paragraph [ref=f10e123]
+              - textbox [ref=f10e124]: "0"
+            - generic [ref=f10e125]:
+              - paragraph [ref=f10e126]: Total Invoice Amount
+              - textbox [ref=f10e127]: 50,000,000
+          - generic [ref=f10e128]:
+            - generic [ref=f10e129]: Invoice PDF
+            - generic [ref=f10e130]:
+              - text: Save PDF
+              - table [ref=f10e131]:
+                - rowgroup [ref=f10e132]:
+                  - row [ref=f10e133]:
+                    - rowheader [ref=f10e134]
+                    - cell [ref=f10e135]:
+                      - generic [ref=f10e136]:
+                        - textbox "select file..." [ref=f10e137]
+                        - button "Browse" [ref=f10e139] [cursor=pointer]
+                    - cell [ref=f10e140]
+          - generic [ref=f10e142]:
+            - generic [ref=f10e143]:
+              - paragraph [ref=f10e144]: Exchange Rate
+              - textbox [disabled] [ref=f10e145]
+            - generic [ref=f10e146]:
+              - paragraph [ref=f10e147]: Tax Rate
+              - textbox [disabled] [ref=f10e148]
+          - generic [ref=f10e149]:
+            - generic [ref=f10e150]: Enter Journal Information
+            - table [ref=f10e152]:
+              - rowgroup [ref=f10e153]:
+                - row [ref=f10e154]:
+                  - columnheader "Account" [ref=f10e155]
+                  - columnheader "Sub Account" [ref=f10e156]
+                  - columnheader "Division" [ref=f10e157]
+                  - columnheader "Project" [ref=f10e158]
+                  - columnheader "Amount" [ref=f10e159]
+                  - columnheader "Remarks" [ref=f10e160]
+                  - columnheader [ref=f10e161]
+              - rowgroup [ref=f10e162]:
+                - row [ref=f10e163]:
+                  - columnheader "Input Purchasing Expenses" [ref=f10e164]
+                - row [ref=f10e165]:
+                  - cell [ref=f10e166]:
+                    - generic [ref=f10e167]:
+                      - combobox [ref=f10e168]
+                      - combobox [ref=f10e171] [cursor=pointer]:
+                        - textbox "14010 Merchandise Inventories" [ref=f10e172]
+                  - cell [ref=f10e173]
+                  - cell [ref=f10e174]:
+                    - combobox [ref=f10e176]:
+                      - option "－" [selected]
+                      - option "DIF DIVTEST0528"
+                  - cell [ref=f10e177]:
+                    - combobox [ref=f10e179]:
+                      - option "－" [selected]
+                      - option "2024 project new"
+                      - option "A A"
+                      - option "2C PJT0528-001"
+                  - cell [ref=f10e180]:
+                    - textbox [ref=f10e181]: 50,000,000
+                  - cell [ref=f10e182]:
+                    - textbox [ref=f10e183]
+                  - cell [ref=f10e184]
+                - row [ref=f10e186]:
+                  - cell "+" [ref=f10e187]
+                - row [ref=f10e189]:
+                  - rowheader "Debit Total Amount" [ref=f10e190]
+                  - cell "50,000,000" [ref=f10e191]
+                  - rowheader [ref=f10e192]
+                  - columnheader [ref=f10e193]
+                - row [ref=f10e194]:
+                  - columnheader "Input Debt Information" [ref=f10e195]
+                - row [ref=f10e196]:
+                  - cell [ref=f10e197]
+                  - cell [ref=f10e198]
+                  - cell "－" [ref=f10e199]
+                  - cell "－" [ref=f10e200]
+                  - cell "50,000,000" [ref=f10e201]
+                  - cell [ref=f10e202]:
+                    - textbox [ref=f10e203]
+                  - cell [ref=f10e204]
+                - row [ref=f10e206]:
+                  - rowheader "Total Debt Amount" [ref=f10e207]
+                  - cell "50,000,000" [ref=f10e208]
+                  - rowheader [ref=f10e209]
+                  - columnheader [ref=f10e210]
+              - rowgroup [ref=f10e211]:
+                - row [ref=f10e212]:
+                  - columnheader [ref=f10e213]
+          - generic [ref=f10e214]:
+            - button "Update" [disabled] [ref=f10e215]
+            - link "Cancel" [ref=f10e216] [cursor=pointer]:
+              - /url: http://127.0.0.1:18080/transaction/purchase
+  - generic [ref=f10e217]:
+    - generic [ref=f10e219]:
+      - generic [ref=f10e220] [cursor=pointer]
+      - generic [ref=f10e221]:
+        - generic [ref=f10e222] [cursor=pointer]: 
+        - text: 
+        - generic [ref=f10e223] [cursor=pointer]: 
+        - text: 
+        - generic [ref=f10e224] [cursor=pointer]:
+          - generic: 
+          - generic [ref=f10e225]: "12"
+        - generic [ref=f10e226] [cursor=pointer]:
+          - generic: 
+          - generic [ref=f10e227]: "104"
+        - generic [ref=f10e228] [cursor=pointer]:
+          - generic: 
+          - generic [ref=f10e229]: "1045"
+        - text: 
+        - generic [ref=f10e230] [cursor=pointer]:
+          - generic: 
+          - generic [ref=f10e231]: "1"
+      - generic [ref=f10e232]:
+        - generic [ref=f10e233] [cursor=pointer]
+        - generic [ref=f10e234] [cursor=pointer]
+        - generic [ref=f10e235] [cursor=pointer]: 
+        - generic [ref=f10e236] [cursor=pointer]
+        - generic [ref=f10e237] [cursor=pointer]:
+          - generic: 
+          - generic [ref=f10e238]: "2"
+        - combobox [ref=f10e239] [cursor=pointer]:
+          - option "#1 update (stacked) (13:47:26)"
+          - option "#2 edit/20026 (13:47:26)" [selected]
+        - generic [ref=f10e240] [cursor=pointer]:
+          - generic: 
+          - generic: 324ms
+        - generic [ref=f10e241]:
+          - generic: 
+          - generic: 10MB
+        - generic [ref=f10e242]:
+          - generic: 
+          - generic: 11.x
+        - generic [ref=f10e243] [cursor=pointer]:
+          - generic: 
+          - generic: "GET transaction/purchase/edit/{id}"
+    - text:                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+  - text: 

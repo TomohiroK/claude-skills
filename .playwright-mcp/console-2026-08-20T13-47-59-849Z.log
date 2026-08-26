@@ -1,0 +1,7 @@
+[     532ms] [LOG] JQMIGRATE: Migrate is installed with logging active, version 3.6.0 @ http://127.0.0.1:18080/js/all.js:28082
+[    1913ms] [ERROR] Failed to load resource: the server responded with a status of 422 (Unprocessable Content) @ http://127.0.0.1:18080/api/detail-vat-taxation?transactionType=2&_=1787233680378:0
+[    2014ms] [ERROR] Failed to load resource: the server responded with a status of 422 (Unprocessable Content) @ http://127.0.0.1:18080/api/detail-wht-taxation?transactionType=2&_=1787233680379:0
+[    2458ms] [ERROR] Failed to load resource: the server responded with a status of 422 (Unprocessable Content) @ http://127.0.0.1:18080/api/detail-vat-taxation?transactionType=2&_=1787233680381:0
+[    2557ms] [ERROR] Failed to load resource: the server responded with a status of 422 (Unprocessable Content) @ http://127.0.0.1:18080/api/detail-wht-taxation?transactionType=2&_=1787233680382:0
+[    3362ms] [LOG] Nothing do tutorial20:48:3.210 @ http://127.0.0.1:18080/js/screens/menus/menu.js:30191
+[    4265ms] [LOG] Nothing do tutorial20:48:4.113 @ http://127.0.0.1:18080/js/screens/menus/menu.js:30191
