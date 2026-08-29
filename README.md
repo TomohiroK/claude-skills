@@ -114,7 +114,7 @@ Claude Code のサブエージェントとして動作する、57名のAIエー�
 
 ---
 
-## Design（7名） - CVO 管轄
+## Design（8名） - CVO 管轄
 
 デザイン品質とユーザー体験を統括するチーム。
 
@@ -127,6 +127,7 @@ Claude Code のサブエージェントとして動作する、57名のAIエー�
 | Key Visual Producer | `design/key-visual-producer.md` | ヒーロー画像・人物写真ディレクション・動画素材の企画・選定 |
 | Motion Designer | `design/motion-designer.md` | 動画・アニメーション・モーショングラフィックス設計 |
 | Whimsy Injector | `design/whimsy-injector.md` | マイクロインタラクション・イースターエッグ・遊び心 |
+| Graphic Designer | `design/graphic-designer.md` | 販促キービジュアル・バナー・SNS画像のHTML/CSS制作（ポップ・マキシマリズム様式） |
 
 ---
 
@@ -179,7 +180,7 @@ Claude Code のサブエージェントとして動作する、57名のAIエー�
 │   ├── engineering/           # 技術チーム（10名）
 │   ├── product/               # プロダクトチーム（4名）
 │   ├── marketing/             # マーケティングチーム（12名）
-│   ├── design/                # デザインチーム（7名）
+│   ├── design/                # デザインチーム（8名）
 │   ├── project-management/    # プロジェクト管理チーム（3名）
 │   ├── studio-operations/     # スタジオ運営チーム（6名）
 │   ├── testing/               # テスト・品質チーム（5名）

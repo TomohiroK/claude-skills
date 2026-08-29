@@ -184,6 +184,7 @@ Web用画像の加工時、**最初に**ファイルサイズを確認・圧縮�
 | frontend-developer | 画像配置のレイアウト制約・レスポンシブ要件 |
 | ux-researcher | ターゲットユーザーのペルソナ・行動パターン |
 | trend-analyst | ビジュアルトレンド・競合のビジュアル表現 |
+| graphic-designer | 素材発注仕様（表情・ポーズ・ライティング・解像度指定） |
 
 **アウトプット渡し先**
 
@@ -192,3 +193,4 @@ Web用画像の加工時、**最初に**ファイルサイズを確認・圧縮�
 | frontend-developer | 画像プレースホルダーHTML・レイアウト指示 |
 | brand-guardian | 完成ビジュアル（ブランド表現レビュー依頼） |
 | seo-specialist | OGP画像仕様（og:image用） |
+| graphic-designer | 切り抜き済み人物写真・マスコット素材（KV組み込み用） |
